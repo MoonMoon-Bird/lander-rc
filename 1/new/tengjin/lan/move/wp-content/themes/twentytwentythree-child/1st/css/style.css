@@ -1,0 +1,226 @@
+body{
+    /*background-image: url("../images/bg0.jpg");
+    background-repeat: no-repeat;
+	background-position: center 0px;
+    background-size: 2000px;
+    background-attachment: fixed;*/
+	width: 100%;
+	font-family: notosans,"メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "A-OTF 新ゴ Pro",A-OTF Shin Go Pro,Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 20px;
+	line-height: 32px;
+	color: #4D4D4D;
+}
+
+a:hover{
+opacity:0.9;
+filter:alpha(opacity=70);
+-ms-filter: "alpha( opacity=70 )";
+}
+a:hover img{
+opacity:0.9;
+filter:alpha(opacity=70);
+-ms-filter: "alpha( opacity=70 )";
+}
+input[name="image"]:hover { opacity:0.9; filter:alpha(opacity=70); }
+
+
+/*___________________ 文字 _____________________*/
+.aka{
+	font-weight: bold;
+    color: #B20000;
+}
+.aka_m{
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 35px;
+    color: #B20000;
+}
+/*.kiiro2{
+    background: linear-gradient(transparent 60%, #FFFF99 60%);
+	font-weight: bold;
+}*/
+.kiiro {
+  background:linear-gradient(transparent 60%, #FFFF99 60%);
+  display: inline;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition:background-size 1.5s;
+font-weight: bold;
+}
+.kiiro.on {
+  /* 横方向を100%にして、マーカーを引く */
+  background-size: 100% 100%;
+}
+.marker {
+  background:linear-gradient(transparent 60%, #FFFF99 60%);
+  display: inline;
+
+  /* 背景の繰り返しを停止 */
+  background-repeat: no-repeat;
+
+  /* マーカーの横方向を0にして縮める */
+  background-size: 0% 100%;
+
+  /* マーカーが引かれる速度を指定 */
+  transition:background-size 1.5s;
+
+font-weight: bold;
+color: #B20000;
+}
+
+/* マーカーが引かれる際に付与するクラス */
+.marker.on {
+  /* 横方向を100%にして、マーカーを引く */
+  background-size: 100% 100%;
+}
+
+.pc{
+	display: none;
+}
+/*___________________ コンテンツ _____________________*/
+/*#wrap{
+    background-image: url("../images/bg01.png");
+    background-repeat: repeat-y;
+	background-position: center 0px;
+	width: 100%;
+	margin: 0px auto 0px;
+	overflow: hidden;
+	display: block;
+}
+*/
+#top{
+	background-image: url("../images/top.jpg");
+    background-repeat: no-repeat;
+	background-position: center 0px;
+    background-size: 2000px;
+	width: 100%;
+    height: 444px;
+	margin: 0px auto 0px;
+	overflow: hidden;
+	display: block;
+}
+/*.ul1{
+	width: 635px;
+	padding-left: 25px;
+	margin: 0px auto 0px;
+	display: block;
+}
+.ul1 li{
+	list-style-type: disc;
+	list-style-position : outside;
+	margin: 0px auto 10px;
+}*/
+
+
+#oku_bg{
+	background-image: url("../images/oku_bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center 0;
+    background-size: 2000px;
+    background-attachment: fixed;
+	width: 100%;
+    padding: 40px 0px 30px;
+	margin: 0px auto 0px;
+    overflow: hidden;
+	display: block;
+}
+
+/*___________________ フォーム _____________________*/
+
+/*.kome{
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","A-OTF 新ゴ Pro",A-OTF Shin Go Pro,"メイリオ", Meiryo,  Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	width: 580px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+	margin: 0 auto 30px;
+	display: block;
+}
+*/
+/*.kome{
+    background-color: #F0F0E1;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","A-OTF 新ゴ Pro",A-OTF Shin Go Pro,"メイリオ", Meiryo,  Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	width: 580px;
+	height: 45px;
+	font-size: 14px;
+	line-height:  20px;
+	color: #333;
+	padding: 15px 30px;
+	margin: 0 auto 30px;
+	overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+transform: translateZ(0);
+	display: block;
+}*/
+/*--------- フッター -----------*/
+
+#foot{
+	width: 750px;
+	font-size: 17px;
+	line-height: 27px;
+	color: #1F1F1F;
+	text-align: center;
+	padding-top: 12px;
+	margin: 0px auto 30px;
+	overflow: hidden;
+	display: block;
+}
+#foot ul{
+	text-align: center;
+	list-style-type: none;
+	margin: 0 auto 0px;
+	display: block;
+}
+#foot ul li{
+	display: inline;
+}
+#foot ul li a{
+	color: #1F1F1F;
+	text-decoration: none;
+}
+#foot small{
+	font-size: 16px;
+}
+/*___________________ トップ _____________________*/
+
+#page-top {
+	background-color: #333333;
+	width: 80px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	opacity:0.8;
+	color: #fff;
+	padding: 3px 3px;
+	border-radius: 5px;
+}
+#page-top a {
+	text-decoration: none;
+	color: #fff;
+	width: 84px;
+	text-align: center;
+	display: block;
+	border-radius: 10px;
+	opacity:0.8;
+	font-size:12px;
+}
+#page-top a:hover {
+	text-decoration: none;
+	opacity:0.5;
+}
+
+
+.btn_end {
+	position: fixed;
+    bottom: 10px;
+	right: 10px;
+    width: 400px;
+	
+	}/**/
+
+/*.btn_end {
+	position: fixed;
+    bottom: 10px;
+	right: 10px;
+	width: 10%;
+	}*/
