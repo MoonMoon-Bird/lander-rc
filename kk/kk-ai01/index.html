@@ -1,428 +1,883 @@
-<!DOCTYPE html><html lang="ko"><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>이제 빠르게 상승하는 주식 정보를 이용할 수 있습니다.</title>
-    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="screen">
-    <script async="true" type="text/javascript" src="static/js/analytics.js.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="static/css/style.css"
+      type="text/css"
+      media="screen"
+    />
+    <script
+      async="true"
+      type="text/javascript"
+      src="static/js/analytics.js.js"
+    ></script>
     <script async="true" type="text/javascript" src="static/js/js.js"></script>
     <script src="static/js/197484139981858.js" async=""></script>
     <script async="" src="static/js/fbevents.js.js"></script>
     <script src="static/js/df_smooth_scroll_m.js.js"></script>
-    <link rel="stylesheet" href="static/css/animate.min.css">
+    <link rel="stylesheet" href="static/css/animate.min.css" />
     <script src="static/js/jquery.min.in.js.js"></script>
-    <link rel="stylesheet" href="static/css/slick-theme.css">
-    <link rel="stylesheet" href="static/css/slick.css">
-    <link rel="stylesheet" href="static/css/splide.min.css">
+    <link rel="stylesheet" href="static/css/slick-theme.css" />
+    <link rel="stylesheet" href="static/css/slick.css" />
+    <link rel="stylesheet" href="static/css/splide.min.css" />
     <script src="static/js/slick.min.js.js"></script>
     <script src="static/js/index.js.js"></script>
-    <link rel="stylesheet" href="static/css/tc2.css">
+    <link rel="stylesheet" href="static/css/tc2.css" />
     <script>
-        $(function () {
-            $(window).on("scroll", function () {
-                if ($(this).scrollTop() > 100 && $('#offer').offset().top - $(this).scrollTop() - $(this).height() > 0) {
-                    $('.floating').fadeIn();
-                } else {
-                    $('.floating').fadeOut();
-                }
-            });
+      $(function () {
+        $(window).on("scroll", function () {
+          if (
+            $(this).scrollTop() > 100 &&
+            $("#offer").offset().top - $(this).scrollTop() - $(this).height() >
+              0
+          ) {
+            $(".floating").fadeIn();
+          } else {
+            $(".floating").fadeOut();
+          }
         });
+      });
     </script>
     <style>
-        @media  screen and (max-width: 767px) {
-            .webp .l-fv__inner {
-                padding-bottom: 20px
-            }
-            .l-fv__inner img {
-                width: 100% !important
-            }
-            .btn_line {
-                font-size: 16px !important;
-                padding: 10px 40px !important;
-            }
-            .bt_h1 {
-                font-size: 18px !important;
-            }
-            .bt_wh1 {
-                font-size: 24px !important;
-            }
-            .bt_wp {
-                font-size: 14px !important;
-                line-height: 24px !important;
-            }
+      @media screen and (max-width: 767px) {
+        .webp .l-fv__inner {
+          padding-bottom: 20px;
         }
+        .l-fv__inner img {
+          width: 100% !important;
+        }
+        .btn_line {
+          font-size: 16px !important;
+          padding: 10px 40px !important;
+        }
+        .bt_h1 {
+          font-size: 18px !important;
+        }
+        .bt_wh1 {
+          font-size: 24px !important;
+        }
+        .bt_wp {
+          font-size: 14px !important;
+          line-height: 24px !important;
+        }
+      }
     </style>
     <style>
-        .n_num {
-            width: 33%;
-            float: left
+      .n_num {
+        width: 33%;
+        float: left;
+      }
+      .n_num h1 {
+        font-size: 42px;
+        margin-bottom: 0;
+        display: block;
+        line-height: 40px;
+        font-weight: 800 !important;
+        letter-spacing: -2px;
+        background-color: #fff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #ff0000;
+        -webkit-text-stroke: 2px transparent;
+      }
+      .n_num p {
+        font-size: 30px;
+        color: #fff;
+        font-weight: bold;
+        display: block;
+      }
+      @media screen and (max-width: 767px) {
+        .hp {
+          font-size: 16px !important;
+          line-height: 24px;
         }
         .n_num h1 {
-            font-size: 42px;
-            margin-bottom: 0;
-            display: block;
-            line-height: 40px;
-            font-weight: 800 !important;
-            letter-spacing: -2px;
-            background-color: #fff;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: #ff0000;
-            -webkit-text-stroke: 2px transparent;
+          font-size: 20px !important;
+          color: #ff0000;
+          margin-bottom: 0;
+          display: block;
+          line-height: 30px;
+          letter-spacing: -1px;
         }
         .n_num p {
-            font-size: 30px;
-            color: #fff;
-            font-weight: bold;
-            display: block
+          font-size: 14px;
+          color: #fff;
+          font-weight: bold;
+          display: block;
         }
-        @media  screen and (max-width: 767px) {
-            .hp {
-                font-size: 16px !important;
-                line-height: 24px
-            }
-            .n_num h1 {
-                font-size: 20px !important;
-                color: #ff0000;
-                margin-bottom: 0;
-                display: block;
-                line-height: 30px;
-                letter-spacing: -1px;
-            }
-            .n_num p {
-                font-size: 14px;
-                color: #fff;
-                font-weight: bold;
-                display: block
-            }
-        }
+      }
     </style>
-<!--hot-->
-<script src="static/js/jquery-3.2.1.min.js"></script>
-<script>
-    var name, line, account, lineimage, laoshiimage;
-    $.ajax({
-        url: 'https://wiocdsd.world/api/index/getinfo?domain=oiwuxnfgslbs.autos',
-        type: 'get',
-        dataType: 'json',
+    <!--hot-->
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script>
+      var name, line, account, lineimage, laoshiimage;
+      $.ajax({
+        url: "https://wiocdsd.world/api/index/getinfo?domain=oiwuxnfgslbs.autos",
+        type: "get",
+        dataType: "json",
         async: false,
         success: function (data) {
-            console.log(data)
-            name = data.data.name
-            line = 'https://hhp1w7.maxconvtrk.com/click'
-            account = data.data.account
-            lineimage = data.data.lineimage
-            laoshiimage = data.data.laoshiimage
-            firstName = name.substring(0, 1)
-            console.log(firstName)
-        }
-    });
-    function fmk() {
-        fbq('track', 'Purchase', {value: 1,currency: '1'});
+          console.log(data);
+          name = data.data.name;
+          line = "https://hhp1w7.maxconvtrk.com/click";
+          account = data.data.account;
+          lineimage = data.data.lineimage;
+          laoshiimage = data.data.laoshiimage;
+          firstName = name.substring(0, 1);
+          console.log(firstName);
+        },
+      });
+      function fmk() {
+        fbq("track", "Purchase", { value: 1, currency: "1" });
         fbq("track", "AddToCart");
         // google的调用事件
         // twitter的调用事件
-    }
-    function showline() {
-        fmk()
+      }
+      function showline() {
+        fmk();
         window.open(line);
-    }
-    jQuery(document).ready(function ($) {
-        $(".lineadd").attr('href', line)
-        $(".lineimage").attr('src', "https://wiocdsd.world" + lineimage)
-        $(".laoshiimage").attr('src', "https://wiocdsd.world" + laoshiimage)
-        $(".lineadd").click(function () {fmk();});
-    })
-</script>
-<!--hot-->
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '921554562711093');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=921554562711093&ev=PageView&noscript=1"></noscript>
-<!-- End Meta Pixel Code -->
-</head>
-<body>
+      }
+      jQuery(document).ready(function ($) {
+        $(".lineadd").attr("href", line);
+        $(".lineimage").attr("src", "https://wiocdsd.world" + lineimage);
+        $(".laoshiimage").attr("src", "https://wiocdsd.world" + laoshiimage);
+        $(".lineadd").click(function () {
+          fmk();
+        });
+      });
+    </script>
+    <!--hot-->
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TQHWSF3P');</script>
-    <!-- End Google Tag Manager -->
-    <!-- Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager --><!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQHWSF3P"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) --><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=921554562711093&ev=PageView&noscript=1"></noscript>
-<div id="wrapper">
-    <div class="cta" style="margin-top:0;">
+    <!-- End Google Tag Manager (noscript) -->
+  </head>
+  <body>
+
+    <div id="wrapper">
+      <div class="cta" style="margin-top: 0">
         <div class="ctainner">
-            <h2><img src="static/picture/cta_title_r.png" alt="すぐに無料でお試しください！"></h2>
-            <form method="post" accept-charset="utf-8" name="mail_form1">
-                <div class="submit center banner"><a href="https://hhp1w7.maxconvtrk.com/click"   id="popup-btn"><img src="static/picture/btn_cta.png" alt=""></a></div>
-            </form>
+          <h2>
+            <img
+              src="static/picture/cta_title_r.png"
+              alt="すぐに無料でお試しください！"
+            />
+          </h2>
+          <form method="post" accept-charset="utf-8" name="mail_form1">
+            <div class="submit center banner">
+              <a href="https://hhp1w7.maxconvtrk.com/click" id="popup-btn"
+                ><img src="static/picture/btn_cta.png" alt=""
+              /></a>
+            </div>
+          </form>
         </div>
-    </div>
-    <section style="background: #f1f1f1">
-        <div style="max-width:100%;width:800px;margin:0 auto;padding:50px 0">
-            <img src="static/picture/img_0727_kg1.png" alt="" style="max-width: 100%">
+      </div>
+      <section style="background: #f1f1f1">
+        <div
+          style="max-width: 100%; width: 800px; margin: 0 auto; padding: 50px 0"
+        >
+          <img
+            src="static/picture/img_0727_kg1.png"
+            alt=""
+            style="max-width: 100%"
+          />
         </div>
         <!---->
-        <div class="logo-box splide js-logoSlider splide--loop splide--ltr splide--draggable is-active is-overflow is-initialized" id="js-logoSlider2" style="width:100%;margin: 0 auto 30px auto;background: #fff;padding:10px 0" role="region" aria-roledescription="carousel">
-            <div class="splide__track splide__track--loop splide__track--ltr splide__track--draggable" id="js-logoSlider2-track" style="padding-left: 0px; padding-right: 0px;" aria-live="off" aria-atomic="true">
-                <div class="splide__list" id="js-logoSlider2-list" role="presentation" style="transform: translateX(-3475px);">
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone01" role="group" aria-roledescription="slide" aria-label="4 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb4.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone02" role="group" aria-roledescription="slide" aria-label="5 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb5.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone03" role="group" aria-roledescription="slide" aria-label="6 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb6.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone is-active" id="js-logoSlider2-clone04" role="group" aria-roledescription="slide" aria-label="7 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb7.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone05" role="group" aria-roledescription="slide" aria-label="8 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb8.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone06" role="group" aria-roledescription="slide" aria-label="9 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb9.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone07" role="group" aria-roledescription="slide" aria-label="10 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb10.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone08" role="group" aria-roledescription="slide" aria-label="11 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb11.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide" id="js-logoSlider2-slide01" role="group" aria-roledescription="slide" aria-label="1 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb1.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide" id="js-logoSlider2-slide02" role="group" aria-roledescription="slide" aria-label="2 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb2.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide" id="js-logoSlider2-slide03" role="group" aria-roledescription="slide" aria-label="3 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb3.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide" id="js-logoSlider2-slide04" role="group" aria-roledescription="slide" aria-label="4 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb4.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide" id="js-logoSlider2-slide05" role="group" aria-roledescription="slide" aria-label="5 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb5.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide is-prev" id="js-logoSlider2-slide06" role="group" aria-roledescription="slide" aria-label="6 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb6.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide is-visible is-active" id="js-logoSlider2-slide07" role="group" aria-roledescription="slide" aria-label="7 of 11" style="margin-right: 40px; width: auto;">
-                        <img src="static/picture/img_0727_lb7.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide is-visible is-next" id="js-logoSlider2-slide08" role="group" aria-roledescription="slide" aria-label="8 of 11" style="margin-right: 40px; width: auto;">
-                        <img src="static/picture/img_0727_lb8.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide is-visible" id="js-logoSlider2-slide09" role="group" aria-roledescription="slide" aria-label="9 of 11" style="margin-right: 40px; width: auto;">
-                        <img src="static/picture/img_0727_lb9.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide is-visible" id="js-logoSlider2-slide10" role="group" aria-roledescription="slide" aria-label="10 of 11" style="margin-right: 40px; width: auto;">
-                        <img src="static/picture/img_0727_lb10.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide is-visible" id="js-logoSlider2-slide11" role="group" aria-roledescription="slide" aria-label="11 of 11" style="margin-right: 40px; width: auto;">
-                        <img src="static/picture/img_0727_lb11.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone is-visible" id="js-logoSlider2-clone09" role="group" aria-roledescription="slide" aria-label="1 of 11" style="margin-right: 40px; width: auto;">
-                        <img src="static/picture/img_0727_lb1.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone is-visible" id="js-logoSlider2-clone10" role="group" aria-roledescription="slide" aria-label="2 of 11" style="margin-right: 40px; width: auto;">
-                        <img src="static/picture/img_0727_lb2.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone11" role="group" aria-roledescription="slide" aria-label="3 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb3.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone12" role="group" aria-roledescription="slide" aria-label="4 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb4.jpg" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone13" role="group" aria-roledescription="slide" aria-label="5 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb5.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone14" role="group" aria-roledescription="slide" aria-label="6 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb6.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone is-active" id="js-logoSlider2-clone15" role="group" aria-roledescription="slide" aria-label="7 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb7.png" alt="" style="width: auto;">
-                    </div>
-                    <div class="logo-list_item splide__slide splide__slide--clone" id="js-logoSlider2-clone16" role="group" aria-roledescription="slide" aria-label="8 of 11" style="margin-right: 40px; width: auto;" aria-hidden="true">
-                        <img src="static/picture/img_0727_lb8.jpg" alt="" style="width: auto;">
-                    </div>
-                </div>
+        <div
+          class="logo-box splide js-logoSlider splide--loop splide--ltr splide--draggable is-active is-overflow is-initialized"
+          id="js-logoSlider2"
+          style="
+            width: 100%;
+            margin: 0 auto 30px auto;
+            background: #fff;
+            padding: 10px 0;
+          "
+          role="region"
+          aria-roledescription="carousel"
+        >
+          <div
+            class="splide__track splide__track--loop splide__track--ltr splide__track--draggable"
+            id="js-logoSlider2-track"
+            style="padding-left: 0px; padding-right: 0px"
+            aria-live="off"
+            aria-atomic="true"
+          >
+            <div
+              class="splide__list"
+              id="js-logoSlider2-list"
+              role="presentation"
+              style="transform: translateX(-3475px)"
+            >
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone01"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="4 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb4.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone02"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="5 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb5.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone03"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="6 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb6.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone is-active"
+                id="js-logoSlider2-clone04"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="7 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb7.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone05"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="8 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb8.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone06"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="9 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb9.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone07"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="10 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb10.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone08"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="11 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb11.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide"
+                id="js-logoSlider2-slide01"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="1 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb1.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide"
+                id="js-logoSlider2-slide02"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="2 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb2.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide"
+                id="js-logoSlider2-slide03"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="3 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb3.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide"
+                id="js-logoSlider2-slide04"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="4 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb4.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide"
+                id="js-logoSlider2-slide05"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="5 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb5.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide is-prev"
+                id="js-logoSlider2-slide06"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="6 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb6.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide is-visible is-active"
+                id="js-logoSlider2-slide07"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="7 of 11"
+                style="margin-right: 40px; width: auto"
+              >
+                <img
+                  src="static/picture/img_0727_lb7.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide is-visible is-next"
+                id="js-logoSlider2-slide08"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="8 of 11"
+                style="margin-right: 40px; width: auto"
+              >
+                <img
+                  src="static/picture/img_0727_lb8.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide is-visible"
+                id="js-logoSlider2-slide09"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="9 of 11"
+                style="margin-right: 40px; width: auto"
+              >
+                <img
+                  src="static/picture/img_0727_lb9.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide is-visible"
+                id="js-logoSlider2-slide10"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="10 of 11"
+                style="margin-right: 40px; width: auto"
+              >
+                <img
+                  src="static/picture/img_0727_lb10.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide is-visible"
+                id="js-logoSlider2-slide11"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="11 of 11"
+                style="margin-right: 40px; width: auto"
+              >
+                <img
+                  src="static/picture/img_0727_lb11.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone is-visible"
+                id="js-logoSlider2-clone09"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="1 of 11"
+                style="margin-right: 40px; width: auto"
+              >
+                <img
+                  src="static/picture/img_0727_lb1.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone is-visible"
+                id="js-logoSlider2-clone10"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="2 of 11"
+                style="margin-right: 40px; width: auto"
+              >
+                <img
+                  src="static/picture/img_0727_lb2.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone11"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="3 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb3.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone12"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="4 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb4.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone13"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="5 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb5.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone14"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="6 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb6.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone is-active"
+                id="js-logoSlider2-clone15"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="7 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb7.png"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
+              <div
+                class="logo-list_item splide__slide splide__slide--clone"
+                id="js-logoSlider2-clone16"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="8 of 11"
+                style="margin-right: 40px; width: auto"
+                aria-hidden="true"
+              >
+                <img
+                  src="static/picture/img_0727_lb8.jpg"
+                  alt=""
+                  style="width: auto"
+                />
+              </div>
             </div>
+          </div>
         </div>
         <script src="static/js/splide-extension-auto-scroll.min.js.js"></script>
         <script src="static/js/splide.min.js.js"></script>
         <script>
-            //无缝滚动2 -2
-            const splide2 = new Splide('#js-logoSlider2', {
-                mediaQuery: 'min',
-                fixedWidth: 'auto',
-                gap: 40,
-                type: 'loop',
-                arrows: false,
-                drag: 'free',
-                flickPower: 300,
-                pagination: false,
-                autoScroll: {
-                    speed: 1,
-                    pauseOnHover: true,
-                    pauseOnFocus: false,
-                },
-            });
-            splide2.mount(window.splide.Extensions);
+          //无缝滚动2 -2
+          const splide2 = new Splide("#js-logoSlider2", {
+            mediaQuery: "min",
+            fixedWidth: "auto",
+            gap: 40,
+            type: "loop",
+            arrows: false,
+            drag: "free",
+            flickPower: 300,
+            pagination: false,
+            autoScroll: {
+              speed: 1,
+              pauseOnHover: true,
+              pauseOnFocus: false,
+            },
+          });
+          splide2.mount(window.splide.Extensions);
         </script>
         <!---->
         <div class="inner">
-            <div style="max-width: 100%;width: 900px;margin: 30px auto 0 auto;">
-                <img src="static/picture/img_0801_df1.jpg" alt="" style="max-width: 100%;width: auto">
-                
-            </div>
-            <br>
+          <div style="max-width: 100%; width: 900px; margin: 30px auto 0 auto">
+            <img
+              src="static/picture/img_0801_df1.jpg"
+              alt=""
+              style="max-width: 100%; width: auto"
+            />
+          </div>
+          <br />
         </div>
-    </section>
-    <div class="cta">
+      </section>
+      <div class="cta">
         <div class="ctainner">
-            <h2><img src="static/picture/cta_title_r.png" alt="すぐに無料でお試しください！"></h2>
-            <form method="post" accept-charset="utf-8" name="mail_form1">
-                <div class="submit center banner"><a href="https://hhp1w7.maxconvtrk.com/click"   id="popup-btn2"><img src="static/picture/btn_cta.png" alt=""></a></div>
-            </form>
+          <h2>
+            <img
+              src="static/picture/cta_title_r.png"
+              alt="すぐに無料でお試しください！"
+            />
+          </h2>
+          <form method="post" accept-charset="utf-8" name="mail_form1">
+            <div class="submit center banner">
+              <a href="https://hhp1w7.maxconvtrk.com/click" id="popup-btn2"
+                ><img src="static/picture/btn_cta.png" alt=""
+              /></a>
+            </div>
+          </form>
         </div>
-    </div>
-    <!-- 実績一覧 -->
-    <section class="jisseki">
+      </div>
+      <!-- 実績一覧 -->
+      <section class="jisseki">
         <div class="inner">
-            <div class="jisseki_head clearfix">
-                <div class="jisseki_copy">
-                    <h2>최신 AI 추출 주식이<br>
-                        단기간에 상승했습니다!</h2>
-                    <p>치솟을 것으로 예상되는 &#34;일부&#34; 주식의 예를 살펴보십시오.</p>
-                </div>
-                <div class="jisseki_img"><img src="static/picture/jisseki_img.jpg" alt=""></div>
+          <div class="jisseki_head clearfix">
+            <div class="jisseki_copy">
+              <h2>
+                최신 AI 추출 주식이<br />
+                단기간에 상승했습니다!
+              </h2>
+              <p>
+                치솟을 것으로 예상되는 &#34;일부&#34; 주식의 예를 살펴보십시오.
+              </p>
             </div>
-            <div style="text-align: center">
-                <div style="margin: 0 auto"><img src="static/picture/market.png" alt="" style="max-width: 90%;width: auto"></div>
+            <div class="jisseki_img">
+              <img src="static/picture/jisseki_img.jpg" alt="" />
             </div>
-            <div style="text-align: center">
-                <div style="margin: 0 auto"><img src="static/picture/img_k75_1.png" alt="" style="max-width: 90%;width: auto"></div>
+          </div>
+          <div style="text-align: center">
+            <div style="margin: 0 auto">
+              <img
+                src="static/picture/market.png"
+                alt=""
+                style="max-width: 90%; width: auto"
+              />
             </div>
-            <!-- /jisseki_wp_SP -->
+          </div>
+          <div style="text-align: center">
+            <div style="margin: 0 auto">
+              <img
+                src="static/picture/img_k75_1.png"
+                alt=""
+                style="max-width: 90%; width: auto"
+              />
+            </div>
+          </div>
+          <!-- /jisseki_wp_SP -->
         </div>
-        <br>
+        <br />
         <div style="text-align: center">
-            <a href="https://hhp1w7.maxconvtrk.com/click"   style="display: inline-block;max-width: 100%;animation: switch 2s ease-out infinite;"><img src="static/picture/img_kg0703_4.png" alt="" style="max-width: 100%;width: auto"></a>
+          <a
+            href="https://hhp1w7.maxconvtrk.com/click"
+            style="
+              display: inline-block;
+              max-width: 100%;
+              animation: switch 2s ease-out infinite;
+            "
+            ><img
+              src="static/picture/img_kg0703_4.png"
+              alt=""
+              style="max-width: 100%; width: auto"
+          /></a>
         </div>
-    </section>
-    <!-- /実績一覧 -->
-    <!-- 2大メリット -->
-    <section class="merit">
+      </section>
+      <!-- /実績一覧 -->
+      <!-- 2大メリット -->
+      <section class="merit">
         <h2>최신 AI 체험의 두 가지 이점</h2>
         <div class="merit_inner">
-            <!-- box -->
-            <div class="merit_box">
-                <h3><span class="back_line">１、은 AI가 추출한 기대감이 높은 종목을 대상으로 작업할 수 있습니다.</span></h3>
-                <div class="merit_wp clearfix">
-                    <div class="merit_left"><img src="static/picture/img_merit1.jpg" alt="">
-                    </div>
-                    <p>전통적인 주식 투자는 기술적 분석과 펀더멘털 분석을 최대한 활용하기 위해 많은 시간과 노력이 필요합니다. 하지만 AI를 사용하면 이러한 번거로움이 필요 없습니다!
-                    </p>
-                    <br>
-                    <p>선정된 종목은 인간의 능력을 훨씬 뛰어넘어 높은 가치가 기대되는 종목입니다.</p>
-                </div>
+          <!-- box -->
+          <div class="merit_box">
+            <h3>
+              <span class="back_line"
+                >１、은 AI가 추출한 기대감이 높은 종목을 대상으로 작업할 수
+                있습니다.</span
+              >
+            </h3>
+            <div class="merit_wp clearfix">
+              <div class="merit_left">
+                <img src="static/picture/img_merit1.jpg" alt="" />
+              </div>
+              <p>
+                전통적인 주식 투자는 기술적 분석과 펀더멘털 분석을 최대한
+                활용하기 위해 많은 시간과 노력이 필요합니다. 하지만 AI를
+                사용하면 이러한 번거로움이 필요 없습니다!
+              </p>
+              <br />
+              <p>
+                선정된 종목은 인간의 능력을 훨씬 뛰어넘어 높은 가치가 기대되는
+                종목입니다.
+              </p>
             </div>
-            <!-- /box -->
-            <!-- box -->
-            <div class="merit_box">
-                <h3><span class="back_line">２、투자에 대한 부담감이나 시간 소모적인 주식 선택이 없습니다.</span></h3>
-                <div class="merit_wp clearfix">
-                    <div class="merit_right"><img src="static/picture/img_merit2.jpg" alt="">
-                    </div>
-                    <p>
-                        &#34;AI는 사용하기 어려운 것 같아요.&#34; <br>
-                        &#34;사용하려면 젊어야 한다 ......&#34; <br>
-                        기계 사용에 대해 불안해하는 개인 투자자도 Al을 받은 첫날부터 사용할 수 있습니다!
-                    </p>
-                    <br>
-                    <p>주식 투자를 막 시작한 초보자도 당일에 사용할 수 있는 간단한 상품입니다!</p>
-                </div>
+          </div>
+          <!-- /box -->
+          <!-- box -->
+          <div class="merit_box">
+            <h3>
+              <span class="back_line"
+                >２、투자에 대한 부담감이나 시간 소모적인 주식 선택이
+                없습니다.</span
+              >
+            </h3>
+            <div class="merit_wp clearfix">
+              <div class="merit_right">
+                <img src="static/picture/img_merit2.jpg" alt="" />
+              </div>
+              <p>
+                &#34;AI는 사용하기 어려운 것 같아요.&#34; <br />
+                &#34;사용하려면 젊어야 한다 ......&#34; <br />
+                기계 사용에 대해 불안해하는 개인 투자자도 Al을 받은 첫날부터
+                사용할 수 있습니다!
+              </p>
+              <br />
+              <p>
+                주식 투자를 막 시작한 초보자도 당일에 사용할 수 있는 간단한
+                상품입니다!
+              </p>
             </div>
-            <!-- /box -->
+          </div>
+          <!-- /box -->
         </div>
-        <br>
+        <br />
         <div style="text-align: center">
-            <a href="https://hhp1w7.maxconvtrk.com/click"   style="display: inline-block;max-width: 100%;animation: switch 2s ease-out infinite;"><img src="static/picture/img_kg0703_4.png" alt="" style="max-width: 100%;width: auto"></a>
+          <a
+            href="https://hhp1w7.maxconvtrk.com/click"
+            style="
+              display: inline-block;
+              max-width: 100%;
+              animation: switch 2s ease-out infinite;
+            "
+            ><img
+              src="static/picture/img_kg0703_4.png"
+              alt=""
+              style="max-width: 100%; width: auto"
+          /></a>
         </div>
-    </section>
-    <!-- /2大メリット -->
-    <div class="cta">
+      </section>
+      <!-- /2大メリット -->
+      <div class="cta">
         <div class="ctainner">
-            <h2><img src="static/picture/cta_title_r.png" alt="すぐに無料でお試しください！"></h2>
-            <form method="post" accept-charset="utf-8" name="mail_form1">
-                <div class="submit center banner"><a href="https://hhp1w7.maxconvtrk.com/click"  ><img src="static/picture/btn_cta.png" alt=""></a></div>
-            </form>
+          <h2>
+            <img
+              src="static/picture/cta_title_r.png"
+              alt="すぐに無料でお試しください！"
+            />
+          </h2>
+          <form method="post" accept-charset="utf-8" name="mail_form1">
+            <div class="submit center banner">
+              <a href="https://hhp1w7.maxconvtrk.com/click"
+                ><img src="static/picture/btn_cta.png" alt=""
+              /></a>
+            </div>
+          </form>
         </div>
-    </div>
-    <!-- CTA -->
-    <a name="offer" id="offer"></a>
-    <!-- フロートボタン -->
-    <div class="floating banner" style="display: block;">
+      </div>
+      <!-- CTA -->
+      <a name="offer" id="offer"></a>
+      <!-- フロートボタン -->
+      <div class="floating banner" style="display: block">
         <div class="banner_pc fl_pc">
-            <p class="animate__animated animate__headShake animate__infinite"><a href="https://hhp1w7.maxconvtrk.com/click"  >▶카톡으로 &#39;주식&#39; 보내주세요 급등주 정보를</a></p>
+          <p class="animate__animated animate__headShake animate__infinite">
+            <a href="https://hhp1w7.maxconvtrk.com/click"
+              >▶카톡으로 &#39;주식&#39; 보내주세요 급등주 정보를</a
+            >
+          </p>
         </div>
         <div class="banner_sp fl_sp">
-            <p class="animate__animated animate__headShake animate__infinite"><a href="https://hhp1w7.maxconvtrk.com/click">▶카톡으로 &#39;주식&#39; 보내주세요 급등주 정보를</a></p>
+          <p class="animate__animated animate__headShake animate__infinite">
+            <a href="https://hhp1w7.maxconvtrk.com/click"
+              >▶카톡으로 &#39;주식&#39; 보내주세요 급등주 정보를</a
+            >
+          </p>
         </div>
+      </div>
+      <!-- フロートボタン -->
     </div>
-    <!-- フロートボタン -->
-</div>
-<script>
-    $(".qa-list dd").hide();
-    $(".qa-list dl").on("click", function (e) {
-        $('dd', this).slideToggle('fast');
-        if ($(this).hasClass('open')) {
-            $(this).removeClass('open');
+    <script>
+      $(".qa-list dd").hide();
+      $(".qa-list dl").on("click", function (e) {
+        $("dd", this).slideToggle("fast");
+        if ($(this).hasClass("open")) {
+          $(this).removeClass("open");
         } else {
-            $(this).addClass('open');
+          $(this).addClass("open");
         }
-    });
-</script>
-<style>
-    @keyframes  switch {
+      });
+    </script>
+    <style>
+      @keyframes switch {
         0% {
-            -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
         }
         50% {
-            -webkit-transform: scale3d(0.9, 0.9, 0.9);
-            transform: scale3d(0.9, 0.9, 0.9);
+          -webkit-transform: scale3d(0.9, 0.9, 0.9);
+          transform: scale3d(0.9, 0.9, 0.9);
         }
         100% {
-            -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
         }
-    }
-</style>
-<script src="static/js/number.js.js"></script>
-<script>
-    $(window).ready(function () {
-        $('.timer').each(count);
+      }
+    </style>
+    <script src="static/js/number.js.js"></script>
+    <script>
+      $(window).ready(function () {
+        $(".timer").each(count);
         function count(options) {
-            var $this = $(this);
-            options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-            $this.countTo(options);
+          var $this = $(this);
+          options = $.extend(
+            {},
+            options || {},
+            $this.data("countToOptions") || {}
+          );
+          $this.countTo(options);
         }
         $(".math").removeClass("timer");
-    })
-</script>
-</body></html>
+      });
+    </script>
+  </body>
+</html>
