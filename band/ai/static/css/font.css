@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url(../font/pretendard-thin.woff) format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url(https://han.fbafe.shop/page_han9/fonts/pretendard-extralight.woff) format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url(../font/pretendard-thin.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url(https://han.fbafe.shop/page_han9/fonts/pretendard-regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url(https://han.fbafe.shop/page_han9/fonts/pretendard-medium.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url(../font/pretendard-thin.woff) format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url(https://han.fbafe.shop/page_han9/fonts/pretendard-bold.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url(https://han.fbafe.shop/page_han9/fonts/pretendard-extrabold.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+/* 노토산스 */
+@font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 350;
+    src: url(https://han.fbafe.shop/page_han9/fonts/notokr-demilight.eot);
+    src: local("notokr-demilight"), url(https://han.fbafe.shop/page_han9/fonts/notokr-demilight.eot) format("embedded-opentype"), url(https://han.fbafe.shop/page_han9/fonts/notokr-demilight.woff) format("woff"), url(https://han.fbafe.shop/page_han9/fonts/notokr-demilight.woff2) format("woff2"), url(https://han.fbafe.shop/page_han9/fonts/notokr-demilight.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    src: url(https://han.fbafe.shop/page_han9/fonts/notokr-regular.eot);
+    src: local("notokr-regular"), url(https://han.fbafe.shop/page_han9/fonts/notokr-regular.eot) format("embedded-opentype"), url(../font/pretendard-thin.woff) format("woff"), url(../font/pretendard-thin.woff2) format("woff2"), url(../font/notokr-regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    src: url(https://han.fbafe.shop/page_han9/fonts/notokr-medium.eot);
+    src: local("notokr-medium"), url(https://han.fbafe.shop/page_han9/fonts/notokr-medium.eot) format("embedded-opentype"), url(../font/pretendard-thin.woff) format("woff"), url(../font/pretendard-thin.woff2) format("woff2"), url(../font/notokr-medium.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Noto Sans KR";
+    font-weight: 700;
+    src: url(https://han.fbafe.shop/page_han9/fonts/notokr-bold.eot);
+    src: local("notokr-bold"), url(https://han.fbafe.shop/page_han9/fonts/notokr-bold.eot) format("embedded-opentype"), url(https://han.fbafe.shop/page_han9/fonts/notokr-bold.woff) format("woff"), url(https://han.fbafe.shop/page_han9/fonts/notokr-bold.woff2) format("woff2"), url(https://han.fbafe.shop/page_han9/fonts/notokr-bold.ttf) format("truetype");
+  }
+  /* 라토 */
+  @font-face {
+    font-family: "Lato";
+    font-weight: 300;
+    src: url(https://han.fbafe.shop/page_han9/fonts/lato-light.eot);
+    src: local("Lato-Light"), url(https://han.fbafe.shop/page_han9/fonts/lato-light.eot) format("embedded-opentype"), url(https://han.fbafe.shop/page_han9/fonts/lato-light.woff) format("woff"), url(https://han.fbafe.shop/page_han9/fonts/lato-light.woff2) format("woff2"), url(https://han.fbafe.shop/page_han9/fonts/lato-light.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Lato";
+    font-weight: 400;
+    src: url(https://han.fbafe.shop/page_han9/fonts/lato-regular.eot);
+    src: local("Lato-Regular"), url(https://han.fbafe.shop/page_han9/fonts/lato-regular.eot) format("embedded-opentype"), url(https://han.fbafe.shop/page_han9/fonts/lato-regular.woff) format("woff"), url(https://han.fbafe.shop/page_han9/fonts/lato-regular.woff2) format("woff2"), url(https://han.fbafe.shop/page_han9/fonts/lato-regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Lato";
+    font-weight: 700;
+    src: url(https://han.fbafe.shop/page_han9/fonts/lato-bold.eot);
+    src: local("Lato-Bold"), url(https://han.fbafe.shop/page_han9/fonts/lato-bold.eot) format("embedded-opentype"), url(https://han.fbafe.shop/page_han9/fonts/lato-bold.woff) format("woff"), url(https://han.fbafe.shop/page_han9/fonts/lato-bold.woff2) format("woff2"), url(https://han.fbafe.shop/page_han9/fonts/lato-bold.ttf) format("truetype");
+  }
+  /* 나눔스퀘어 */
+  @font-face {
+    font-family: "NanumSquare";
+    font-weight: 300;
+    src: url(https://han.fbafe.shop/page_han9/fonts/nanumsquarel.woff) format("woff");
+  }
+  @font-face {
+    font-family: "NanumSquare";
+    font-weight: 400;
+    src: url(https://han.fbafe.shop/page_han9/fonts/nanumsquarer.woff) format("woff");
+  }
+  @font-face {
+    font-family: "NanumSquare";
+    font-weight: 700;
+    src: url(https://han.fbafe.shop/page_han9/fonts/nanumsquareb.woff) format("woff");
+  }
+  @font-face {
+    font-family: "NanumSquare";
+    font-weight: 800;
+    src: url(https://han.fbafe.shop/page_han9/fonts/nanumsquareeb.woff) format("woff");
+  }
+  /* @import url('nanumsquare.css'); */
+  /* 지마켓 */
+  @font-face {
+    font-family: "Gmarket Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Gmarket Sans Bold"), local("GmarketSans-Bold"),
+    url(https://vutsnv.com/static09201108x/font/GmarketSansBold.woff) format("woff"),
+     url("https://han.fbafe.shop/page_han9/fonts/gmarketsansbold.woff2") format("woff2"),
+      url("https://han.fbafe.shop/page_han9/fonts/gmarketsansbold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: "Gmarket Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Gmarket Sans Medium"), local("GmarketSans-Medium"),
+    url(../font/pretendard-thin.woff) format("woff"), url("https://han.fbafe.shop/page_han9/fonts/gmarketsansmedium.woff2") format("woff2"), url("../font/pretendard-thin.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: "Gmarket Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Gmarket Sans Light"), local("GmarketSans-Light"),
+    url(https://han.fbafe.shop/page_han9/fonts/gmarketsanslight.woff) format("woff"), url("https://han.fbafe.shop/page_han9/fonts/gmarketsanslight.woff2") format("woff2"), url("https://han.fbafe.shop/page_han9/fonts/gmarketsanslight.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* 경기천년바탕체 */
+  @font-face {
+    font-family: "GyeonggiBatang";
+    src: url("https://han.fbafe.shop/page_han9/fonts/gyeonggibatang.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* 경기천년제목체 */
+  @font-face {
+    font-family: "GyeonggiTitleM";
+    src: url("https://han.fbafe.shop/page_han9/fonts/gyeonggititlem.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* font-family: 'Noto Sans KR', sans-serif */
+  /* 나눔고딕 */
+  @font-face {
+    font-family: "Jalnan";
+    font-weight: normal;
+    font-style: normal;
+    src: url(https://han.fbafe.shop/page_han9/fonts/jalnan.ttf) format("ttf");
+    src: url(http://xn--ai-ce6ik9m99wmop.com/assets/fonts/JalnanOTF.otf) format("otf");
+  }
+  @font-face {
+    font-family: "yg-jalnan";
+    src: url("https://vutsnv.com/static09201108x/font/JalnanOTF00.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SB Aggro';
+    src: url(../font/pretendard-thin.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'SB Aggro';
+    src: url(../font/pretendard-thin.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'SB Aggro';
+    src: url(../font/pretendard-thin.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans CJK KR';
+    src: url(http://xn--ai-ce6ik9m99wmop.com/assets/fonts/NotoSansCJKkr-Regular.otf) format('otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans CJK KR';
+    src: url(http://xn--ai-ce6ik9m99wmop.com/assets/fonts/NotoSansCJKkr-Light.otf) format('otf');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+    /* gulim */
+
+    @font-face {
+      font-family: 'Gulim';
+      src: url(https://han.fbafe.shop/page_han9/font/Gulim.woff) format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'FreestyleScript';
+      src: url(https://han.fbafe.shop/page_han9/fonts/freescpt.woff) format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
