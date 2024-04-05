@@ -307,8 +307,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="Bnr">
 <div class="floating">
 <div class="float_in clearfix">
-<div class="fl_box"  href="https://hhp1w7.maxconvtrk.com/click">
-<a href="https://hhp1w7.maxconvtrk.com/click"><img src="static/picture/btn_cta2.png" alt="無料体験版のお申し込みをする"></a>
+<div class="fl_box"  onclick="goLink()">
+<a onclick="goLink()"><img src="static/picture/btn_cta2.png" alt="無料体験版のお申し込みをする"></a>
 </div>
 </div>
 </div>
@@ -317,6 +317,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ページトップ -->
 <div class="button"><a href="#"><img src="static/picture/pagetop.png" alt="" class="animate__animated animate__fadeIn"></a></div>
 <!-- ページトップ -->
+<script>
+  function goLink(){
+      fbq('track', 'CompleteRegistration');
 
-	<a href="https://smalltool.github.io/" style="display:none;">仿站神器</a>
+      location.href = 'https://hhp1w7.maxconvtrk.com/click'
+  }
+</script>
+
 </body></html>
