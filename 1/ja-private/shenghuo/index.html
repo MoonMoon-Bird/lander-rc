@@ -52,33 +52,13 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel Code -->
 
 <script src="static/js/jquery-3.2.1.min.js"></script> 
-   <script type="application/javascript">
-    //点击按钮
-    var isclick = true;
-    function showline() {
+<script>
+  function goLink(){
+      fbq('track', 'CompleteRegistration');
 
-        var accountList=[
-       {
-            "id": "150679100",
-            "link":"https://line.me/ti/p/VkR9oHOOmn"
-        }, 
-      
-        ]
-        var account = accountList[Math.floor(Math.random()*accountList.length)];
-        if (isclick) {
-            isclick = false;
-            
-            fmk();
-            window.open(account.link);
-            return;
-        }
-        if (isclick==false) {
-         
-            window.open(account.link)
-        }
-    }
+      location.href = 'https://hhp1w7.maxconvtrk.com/click'
+  }
 </script>
- 
 <script>
       function fmk() {
         fbq('track', 'Purchase', {
@@ -97,7 +77,16 @@ fbq('track', 'PageView');
 </head>
 
 <body>
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TQHWSF3P');</script>
+  <!-- End Google Tag Manager --><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQHWSF3P"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
 
   <header>
@@ -107,7 +96,7 @@ fbq('track', 'PageView');
     <div class="container_750">
       <div class="form">
         <form class="">
-          <a onclick="showline()">
+          <a onclick="golink()">
             <img class="btn" src="static/picture/button1.png"></a>
         </form>
       </div><!-- /form	-->
@@ -275,7 +264,7 @@ fbq('track', 'PageView');
 
       <div class="form">
         <form class="">
-          <a onclick="showline()">
+          <a onclick="golink()">
             <img class="btn" src="static/picture/button1.png"></a>
         </form>
       </div><!-- /form	-->
@@ -338,7 +327,7 @@ fbq('track', 'PageView');
       </div>
       <div class="form">
         <form class="">
-          <a onclick="showline()">
+          <a onclick="golink()">
             <img class="btn" src="static/picture/button1.png"></a>
         </form>
       </div><!-- /form	-->
@@ -384,7 +373,7 @@ fbq('track', 'PageView');
 
         <div class="form">
           <form class="">
-            <a onclick="showline()">
+            <a onclick="golink()">
               <img class="btn" src="static/picture/button1.png"></a>
           </form>
         </div><!-- /form	-->
@@ -407,7 +396,7 @@ fbq('track', 'PageView');
     </address>
   </footer>
   <div class="flbtn"> <!-- ここからは変更しないでください -->
-    <a class="" onclick="showline()">
+    <a class="" onclick="golink()">
       <!-- ここまでは変更しないでください -->
       <img class="" src="static/picture/button_pc.png">
       <!-- ここからは変更しないでください -->
