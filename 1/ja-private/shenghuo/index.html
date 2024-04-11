@@ -52,26 +52,6 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel Code -->
 
 <script src="static/js/jquery-3.2.1.min.js"></script> 
-<script>
-  function goLink(){
-      fbq('track', 'CompleteRegistration');
-
-      location.href = 'https://hhp1w7.maxconvtrk.com/click'
-  }
-</script>
-<script>
-      function fmk() {
-        fbq('track', 'Purchase', {
-          value: 1,
-          currency: 'USD',
-        });
-      }
-</script>
-
-
-
-
-
 
 
 </head>
@@ -406,8 +386,13 @@ fbq('track', 'PageView');
 
 
   <script src="static/js/modernizr-custom.js"></script>
-	<a href="https://smalltool.github.io/" style="display:none;">网页批量下载器</a>
+  <script>
+    function golink(){
+        fbq('track', 'CompleteRegistration');
 
+        location.href = 'https://hhp1w7.maxconvtrk.com/click'
+    }
+</script>
 
 
 </body></html>
