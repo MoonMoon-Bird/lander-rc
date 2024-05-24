@@ -205,33 +205,5 @@
     .zoomtxt img{width: 100%;}
   </style>
    
-   <script data-cfasync="false" src="static/js/email-decode.min.js"></script><script type="text/javascript">
-    $('.cbtn').click(function() {
-     var _list = [
-     // 客服链接
-   "https://line.me/ti/p/E5CUyGhcYH",
-   "https://line.me/ti/p/N-KYz_eNmQ",
-   "https://line.me/ti/p/x__BaNQaqp",
-   "https://line.me/ti/p/hqDU9dlWYm",
-
-];
-// 检查本地存储中是否有已保存的链接
-var clickedLink = localStorage.getItem('clickedLink');
-var _link;
-
-if (clickedLink && _list.includes(clickedLink)) {
- // 如果本地存储的链接存在于列表中，使用它
- _link = clickedLink;
-} else {
- // 否则，随机选择一个新链接并保存到本地存储
- _link = _list[Math.floor(Math.random() * _list.length)];
- localStorage.setItem('clickedLink', _link);
-}
-
-     window.open(_link); 
- LA.track('Line');
-      })
-       
- </script>
 </body>
 </html>
