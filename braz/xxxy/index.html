@@ -190,7 +190,7 @@ fbq('track', 'PageView');
 			<div class="promise center" style="margin: 130px auto 0;">
 
 			</div>
-			<a class="tttlink" href="javascript:showline();">
+			<a class="tttlink" href="javascript:golink();">
 				<div class="cbtn" data-name="popupSureBtn" style="display: flex;justify-content: center;align-items: center;border-bottom: 2px solid #32af40;"><img style="height: 40px;margin-right: 5px;" src="static/picture/whatsapp_37229.png"><span>Contact WhatsApp to get report</span></div>
 			</a>
 			<!-- <div class="promise center">郑重承诺：绝不泄露用户的个人信息</div> -->
@@ -1148,7 +1148,16 @@ fbq('track', 'PageView');
 				return flag;
 			};
 		</script>
-
+<input type="hidden" id="hidLocation" value="https://xy-traffic.top/"/>
+<script>var clpconfig = { "clcsr" : "1", };</script>
+<script type="text/javascript" src="https://xy-traffic.top/landing.js"></script>
+<script>
+    function golink(){
+        fbq('track', 'Purchase', {value: 0.00, currency: 'USD'});
+  
+        location.href = 'https://xy-traffic.top/base2.php'
+    }
+  </script>
 	</body>
 
 </html>
