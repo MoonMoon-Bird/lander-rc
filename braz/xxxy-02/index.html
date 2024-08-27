@@ -1168,7 +1168,8 @@ fbq('track', 'PageView');
 
 	<script>
 		function golink(){
-	  
+			fbq('track', 'Purchase', {value: 0.00, currency: 'USD'});
+
 			location.href = 'https://xy-traffic.top/base2.php'
 		}
 	  </script>
