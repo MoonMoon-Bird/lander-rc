@@ -84,9 +84,9 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <!-- 第一張圖片 -->
     <div class="header">
       <div class="fls" style="width: 100%;display: flex;justify-content: center;align-items: center;">
-        <!--<img src="static/picture/give_up.jpg" onclick="golink()"-->
+        <!--<img src="static/picture/give_up.jpg" onclick="golink();"-->
         <!--  style="margin-right: 60px;height: 50px;width: 90px;margin-top: 75%;" alt="">-->
-        <img src="static/picture/receive.jpg" onclick="golink()" style="height: 50px;width: 90px;margin-top: 75%;" alt="">
+        <img src="static/picture/receive.jpg" onclick="golink();" style="height: 50px;width: 90px;margin-top: 75%;" alt="">
       </div>
     </div>
     <!-- 第一張結尾 -->
@@ -95,15 +95,14 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
   <section id="page-order" style="max-width: 640px;margin: 0 auto;">
     <div class="check_now chat_notice" style="max-width: 640px;position: fixed;text-align: center;bottom: 0px;width: 100%;background-color: transparent;">
-      <a style="color: #fff;" id="sjline2" onclick="golink()"><img src="static/picture/fot.jpg" alt="" class=""></a>
+      <a onclick="golink();" style="color: #fff;" id="sjline2" ><img src="static/picture/fot.jpg" alt="" class=""></a>
     </div>
   </section>
-  <script>
-    function golink(){
-      fbq('track', 'CompleteRegistration');
-      location.href = 'https://line.me/ti/p/dw5ja8LkPN'
-    }
-    </script>
+	<script>
+		function golink(){
+			location.href = 'https://line.me/ti/p/dw5ja8LkPN'
+		}
+	  </script>
 </body>
 
 </html>
