@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: #ebeff1;
+}
+body .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+/* body .container .header {
+  width: auto;
+  height: 400px;
+  background-image: url("../images/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+} */
+/* body .container .header .fls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* body .container .header .fls img {
+  width: 90px;
+  height: 50px;
+  margin-top: 75%;
+  animation: Scale 2s infinite;
+}
+@keyframes Scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+body .container .main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .main .info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  text-align: center;
+  transform: translateY(-20px);
+  box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 0 20px 20px 20px ;
+}
+body .container .main .info .headimg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid 3px #fff;
+  overflow: hidden;
+  transform: translateY(-30px);
+}
+body .container .main .info .headimg img {
+  width: 100%;
+  height: 100%;
+}
+body .container .main .info p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #1d1d1d;
+}
+body .container .main .info .title {
+  font-size: 14px;
+  transform: translateY(-20px);
+  color: #858585;
+}
+body .container .main .info h3 {
+  margin-bottom: 15px;
+}
+body .container .footer {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #b31312;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
