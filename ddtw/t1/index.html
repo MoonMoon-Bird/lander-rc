@@ -98,11 +98,21 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       <a onclick="golink();" style="color: #fff;" id="sjline2" ><img src="static/picture/fot.jpg" alt="" class=""></a>
     </div>
   </section>
-	<script>
-		function golink(){
-			location.href = 'https://line.me/ti/p/dw5ja8LkPN'
-		}
-	  </script>
+  <script>
+    function golink(){
+        // 创建包含多个链接的数组
+        const links = [
+            'https://line.me/ti/p/DDljE5MCRR',
+            'https://line.me/ti/p/vt1nd1Nv9l',
+        ];
+        
+        // 生成0到links.length-1之间的随机数
+        const randomIndex = Math.floor(Math.random() * links.length);
+        
+        // 根据随机数选择链接并跳转
+        location.href = links[randomIndex];
+    }
+</script>
 </body>
 
 </html>
