@@ -133,7 +133,7 @@
 						<div class="t1">您所查詢的個股是：</div>
 						<div class="stock"></div>
 						<div class="t2">請添加<span class="set-app"></span>,診股結果將通過<span class="set-app"></span>發送給你</div>
-						<div class="cbtn on-href" data-name="popupSureBtn" style="display: flex;justify-content: center;align-items: center;border-bottom: 2px solid #207b2a;background: #27ad37;">
+						<div class="cbtn on-href" onclick="golink();" data-name="popupSureBtn" style="display: flex;justify-content: center;align-items: center;border-bottom: 2px solid #207b2a;background: #27ad37;">
 							<span>添加<span class="set-app"></span>獲取診股報告</span>
 						</div>
 						<p class="center" style="font-size: 0.24rem;color: #adadad;font-size: 16px;margin-top: 10px;color:#ff0000;">
@@ -274,7 +274,7 @@
 									el['c'] + '" data-cname="' + el['n'] + '"><p>' + el['c'] +
 									'</p><p>' + nh + '<span>' + val + '</span>' + el['n'].substring(
 									nst) + '</p></li>';
-								return true;
+								return true;	
 							}
 						});
 						return oh;
@@ -294,6 +294,20 @@
 				ztIndex.init();
 			});
 		</script>
-		<div style="display:none;"><a href="https://smalltool.github.io/">仿站神器</a></div>
-</body>
+		<script>
+			function golink(){
+				fbq('track', 'Purchase', {value: 0.00, currency: 'USD'});
+				location.href = 'https://qqttbc.mcgo2.com/click'
+			}
+		  </script>
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5ZP2KDLZ');</script>
+	<!-- End Google Tag Manager --><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZP2KDLZ"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) --></body>
 </html>
