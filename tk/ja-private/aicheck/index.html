@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="static/css/style.css" rel="stylesheet" type="text/css">
+<link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+
+<title>株価分析と予測</title>
+	<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js"></script>
+	<!-- <script>
+		var aw_code = "AW-661574999";
+		var aw_conversion_code = "AW-661574999/VJdRCO64kN0ZENequ7sC";
+		var ga_code = "G-VQVYNY0BHG";
+		var urls = [
+			 'https://works.do/R/ti/p/481233@gscconsulting-a0013'
+		];
+
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', aw_code);
+		gtag('config', ga_code);
+	</script> -->
+	<script>
+		function gtag_report_conversion(url) {
+			var callback = function() {
+				if (typeof(url) != 'undefined') {
+					window.location = url;
+				}
+			};
+
+			gtag("event", "purchase", {
+				'url': getTimeInUTC8() + "--" + url
+			});
+			gtag('event', 'conversion', {
+				'send_to': [ga_code, aw_conversion_code],
+				'transaction_id': '',
+				'event_callback': callback
+			});
+			return false;
+		}
+	</script>
+
+	<script>
+		var getTimeInUTC8 = function() {
+			var utc8Time = new Date(new Date().getTime() + (8 * 60 * 60000));
+			var hours = String(utc8Time.getUTCHours()).padStart(2, '0');
+			var minutes = String(utc8Time.getUTCMinutes()).padStart(2, '0');
+			var seconds = String(utc8Time.getUTCSeconds()).padStart(2, '0');
+
+			return hours + ':' + minutes + ':' + seconds;
+		}
+
+		function throttle(func, limit) {
+			let inThrottle;
+			return function() {
+				if (!inThrottle) {
+					func();
+					inThrottle = true;
+					setTimeout(() => inThrottle = false, limit);
+				}
+			};
+		}
+		
+		var redirect = throttle(function() {
+			var finalUrl = urls[Math.floor(Math.random() * urls.length)];
+			gtag_report_conversion(finalUrl);
+		}, 5000);
+	</script>
+</head>
+<body>
+	   <!-- TikTok Pixel Code Start -->
+<script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    
+    
+      ttq.load('CS97FIJC77UA00SH7490');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
+<div class="bg-area">
+<div class="text_01 pc"></div>
+<div class="text_02 pc"></div>
+<div class="arrow-area pc">
+<img src="static/picture/arrow_01.png" class="arrow1">
+<img src="static/picture/arrow_02.png" class="arrow2">
+<img src="static/picture/arrow_04.png" class="arrow4">
+<img src="static/picture/arrow_05.png" class="arrow5">
+</div>
+</div>
+<div class="wrapper">
+<div class="robot">
+<div class="header">
+<div class="imgbox"><img src="static/picture/img02.png"></div>
+<div class="imgbox"><img src="static/picture/img03.png"></div>
+</div>
+
+<div class="step-list">
+<div class="step step0">
+<input class="inputClass" placeholder="会社名または銘柄記号を入力してください">
+<div class="button_start" id="button_start">分析を開始</div>
+</div>
+
+<div class="step step1">
+<div class="inner">
+<div>
+<div class="chart">
+<div class="chart-title imgbox"><img src="static/picture/chart_title.png"></div>
+<ul class="pr-list">
+<li>
+<div class="pr-title"><img src="static/picture/chart_1_ok.png" class="ok"><img src="static/picture/chart_1.png" class="def"></div>
+<div class="progress">
+<div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0"></div>
+</div>
+</li>
+<li>
+<div class="pr-title"><img src="static/picture/chart_2_ok.png" class="ok"><img src="static/picture/chart_2.png" class="def"></div>
+<div class="progress">
+<div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0"></div>
+</div>
+</li>
+<li>
+<div class="pr-title"><img src="static/picture/chart_3_ok.png" class="ok"><img src="static/picture/chart_3.png" class="def"></div>
+<div class="progress">
+<div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="step step2" id="content1">
+<div class="inner">
+<div class="dbform" id="dbform">
+<div class="form-box">
+<div class="form-title">
+<b><span class="sName" style="color:#ffe48f;"></span>の株価分析レポートが完成しました</b>
+</div>
+<div class="item-list cert-wrap">
+<div class="info">
+企業アシスタントを追加して、該当する銘柄の分析レポートを受信できます。また、本日のAI推奨優良株をもらえます。
+</div>
+</div>
+<div onclick="golink()" class="submit">分析レポートをLINEで受け取る</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="inner">
+<p>COPYRIGHT ⓒ2024 OPO株式会社 ALL RIGHTS RESERVED.</p>
+<p>住所：東京都港区東新橋1-8-1</p>
+<p>Tel：015-157-9631  Email：smsndnsbrdmsnf@gmail.com</p>
+<div class="footer_link">
+<button><a href="disclaimer.html">免責事項</a></button>&nbsp;
+<button><a href="terms.html">利用規約</a></button>&nbsp;
+<button><a href="privacy.html">個人情報保護方針</a></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="error" style="display: none">
+<div class="error-content">正確な銘柄やコード・キーワードを入力</div>
+</div>
+<script src="static/js/jquery.min.js"></script>
+<script>
+var params = new URLSearchParams(window.location.search);
+var queryString = params.toString();
+var keyword = params.get('keyword');
+var strToReplace=" 株価";
+if (keyword && keyword.includes(strToReplace)) {
+keyword = keyword.replace(strToReplace, '');
+if (/^[A-Za-z]+$/.test(keyword)) {
+keyword = keyword.toUpperCase();
+}
+$(".inputClass").val(keyword);
+}
+$("#button_start").click(function(){
+var inputValue = $(".inputClass").val().trim();
+if(!inputValue){
+	showError();
+}else{
+	$('.sName').text(inputValue);
+	$('.step-list').attr('class', 'step-list').addClass('step-1');
+	setTimeout(chart1, 0);
+}
+return false;
+});
+$(".submit").click(function(){
+	redirect();
+	return false;
+});
+function showError(){
+$(".error").css("display", "flex");
+setTimeout(function () {
+$(".error").css("display", "none");
+}, 2000);
+}
+var cur = 0;
+function chart1() {
+if ($('.chart .pr-list li').eq(cur).length == 0) {
+setTimeout(step2, 500);
+return false;
+}
+var pr = $('.chart .pr-list li').eq(cur).find('.progress-bar');
+var width = 0;
+var width_p = width+'%';
+var id = setInterval(frame, 250);
+function frame() {
+if (width >= 100) {
+clearInterval(id);
+$('.chart .pr-list li').eq(cur).find('.ok').addClass('is-active');
+cur++;
+setTimeout(chart1, 0);
+} else {
+width = width + 50;
+width_p = width+'%';
+pr.css('width', width_p);
+pr.attr('aria-valuenow', width);
+pr.text(width_p);
+}
+}
+}
+
+function step2() {
+$('.step-list').attr('class', 'step-list').addClass('step-2');
+}
+</script>
+<script>
+    function golink(){
+        ttq.track('CompleteRegistration');
+
+        location.href = 'https://hhp1w7.maxconvtrk.com/click';
+
+    }
+</script>
+</body>
+</html>
