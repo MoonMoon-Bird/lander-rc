@@ -30,7 +30,7 @@ let currentMonth = new Date().getMonth() + 1;
 let imagePaths = [
   'images/button_01.png',
   'images/button_02.png',
-  'images/button_03.png',
+  'image/button.png',
   'images/button_04.png',
   'images/button_05.png',
   'images/button_06.png',
