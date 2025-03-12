@@ -1,0 +1,813 @@
+
+body {
+  /***	フォント関連設定	***/
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "A-OTF 新ゴ Pro", A-OTF Shin Go Pro, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 5vw;
+	/*	25文字入る	*/
+	font-size: 4vw;
+	/*	25文字入る	*/
+	line-height: 1.7;
+
+	/***	背景＆文字色設定	***/
+	background: #fff;
+	color: #222;
+
+	font-feature-settings: "palt";
+	text-align: justify;
+   /* ドット（水玉）模様のCSS */
+/* background-image   : radial-gradient(#f2f7fb 11%, transparent 14%),
+                      radial-gradient(#f2f7fb 11%, transparent 14%);
+background-position: 0 0, 20px 20px;
+background-size    : 40px 40px; */
+
+  /* background-color: #f2f2f2; */
+}
+
+h2 {
+	padding: 3em 0.5em;
+}
+
+a {
+  cursor: pointer;
+}
+img {
+  display: block; /*	ブロック要素としてふるまう：中揃えで表示	*/
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+strong {
+  font-weight: bold;
+}
+
+
+/*----------------------------------------------------------	
+背景の設定
+------------------------------------------------------------*/
+#wrapper {
+  margin: 0 auto;
+  background: url("../image/bg_wrapper1000.png") center center repeat-y;
+}
+/*背景を重ねた時用*/
+.wrapper {
+  margin: 0 auto;
+  background: url("../image/bg_wrapper1000.png") center center repeat-y;
+}
+.bg {
+  background-image: url("../image/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.bg_benefit {
+  background-image: url("../image/bg_benefit.jpg");
+  background-size: cover;
+  background-position: top;
+}
+.bg_intro {
+  background-image: url("../image/bg_intro.jpg");
+  background-size: cover;
+  background-position: top;
+}
+.bg_media {
+  background-image: url("../image/bg_media.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.bg_result {
+  background-image: url("../image/bg_results.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+.bg_case {
+  background-image: url("../image/bg_case.png");
+  background-size: cover;
+  background-position: center top;
+}
+.bg_reason {
+  background-image: url("../image/bg_reason.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+.bg_header {
+  background-image: url("../image/header_bg.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+
+.bg_white{
+  background: #FFFFFF;
+}
+.bg_gray{
+  background: #f5f5f5;
+}
+.bg_white1000{
+  background: #FFFFFF;
+  width: 1000px;
+  margin: 0 auto;
+}
+.bg_blue{
+  background: #013089;
+}
+.bg_blue2{
+  background: #1b1a28;
+
+}
+.bg_navy{
+  background: #000436;
+}
+.bg_navy2{
+  background: #112648;
+}
+
+/* ドット斜め */
+
+.bg_skew_dot{
+  background-color: #fff;
+  background-image:
+    radial-gradient(#7bded9 20%, transparent 20%),
+    radial-gradient(#7bded9 20%, transparent 20%);
+    background: repeat;
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+.bg_dot{
+ /* ドット（水玉）模様のCSS */
+background-color   : #ffffff;
+background-image   : radial-gradient(#f2f7fb 11%, transparent 14%),
+                      radial-gradient(#f2f7fb 11%, transparent 14%);
+background-position: 0 0, 20px 20px;
+background-size    : 40px 40px;
+
+  background-repeat: repeat;
+}
+.bg_stripe{
+ /* ストライプパターンのCSS */
+background : repeating-linear-gradient(315deg,
+#f2f7fb,
+#f2f7fb 8px,
+#ffffff 0,
+#ffffff 17px);
+background-repeat: repeat;
+}
+/*---	背景ここまで---*/
+
+
+footer {
+	margin: 0 auto;
+	padding: 1em 0;
+	padding-bottom: calc((264 / 890) * 96vw + 1.5em);
+	background: #000;
+	color: #fff;
+	text-align: center;
+	font-size: 75%;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+footer a:hover {
+	color: #fff;
+}
+
+address {
+	font-style: normal;
+}
+
+
+/***	テキスト装飾設定	***/
+.bold{
+  font-weight: bold;
+}
+.large {
+  font-size: 120%;
+}
+.xlarge {
+  font-size: 144%;
+}
+.xxlarge {
+  font-size: 172.8%;
+}
+.small {
+  font-size: 82.5%;
+}
+.xsmall {
+  font-size: 62.5%;
+}
+.xxsmall {
+  font-size: 56.25%;
+}
+.u {
+  text-decoration: underline;
+}
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}
+.pink{
+  color: #d73358;
+}
+.white{
+  color: #FFFFFF;
+}
+.underline {
+  background: linear-gradient(transparent 70%, yellow 70%);
+}
+.u_black {
+  text-decoration: underline;
+  font-weight: bold;
+  
+}
+.highlight_blue {
+  background-color: #000436;
+  padding: 0.1em;
+}
+.highlight_white {
+  background-color: #fff;
+  padding: 0.1em;
+}
+.highlight {
+  background-color: #fff266;
+}
+.redhigh {
+  color: red;
+  background-color: #fff266;
+}
+/***	テキスト装飾設定ここまで	***/
+
+/***------------------------------------　
+ボックスモデル設定
+------------------------------------***/
+
+.text {
+  width: 100%;
+  margin: 0 auto;
+}
+.container{
+  width: 100%;
+  margin: 0 auto;
+  }
+.container_750{
+  width: 100%;
+  margin: 0 auto;
+  }
+  .content{
+    padding-bottom: 2em;
+
+  }
+
+/***　中央揃え　***/
+.center{
+  text-align: center;
+}
+
+/* 白背景 */
+.white_box{
+    background-color: #fff;
+    width: 95%;
+    margin: 0em auto;
+    padding: 2em 0.5em;
+}
+.white_box_inr{
+  padding: 0.5em;
+}
+.white_box_inr p{
+  padding-bottom: 2em;
+}
+.last{
+  padding-bottom: 0;
+}
+.content_whitebox{
+  padding-bottom: 2em;
+}
+.white_box_profile{
+  background-color: #fff;
+  width: 95%;
+  margin: 0em auto;
+  padding: 0em 0em;
+}
+/***　ボックスモデル設定ここまで　***/
+
+/* 改行用 */
+
+.text p{
+  padding: 0.5em 0;
+ }
+
+ /* 動画埋め込み設定 */
+
+.movie {
+  width: 96%; /* 任意の横幅を指定 */
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+
+
+/***	画像右寄せ設定（フロート）	***/
+.pic_right {
+  float: right;
+  margin: 10px -15px 10px 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+/***	PC・スマホ改行設定	***/
+.pconly {
+  display: none;
+}
+.sponly {
+  display: block;
+}
+
+/* リスト設定　お悩み等 */
+
+.check {
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  padding: 1em 1em 1em 2em;
+  border-radius: 10px;
+}
+.check .check_box {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+.check .check_box img {
+  width: 33px;
+  height: 33px;
+  margin-right: 1em;
+}
+.check .check_box p {
+  text-align: left;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+
+
+/*---------------------------------------------------------------------------
+ *		class-name　案件ごとのコンテンツ内容
+ ---------------------------------------------------------------------------*/
+ .medal{
+  /* padding: 0.5em 0;
+  border-top: 5px solid #986f31;
+  border-bottom: 5px solid #986f31; */
+ }
+ .results{
+  padding: 0 1.5em;
+ }
+.content_case{
+  padding: 0 2em;
+}
+.content_case img{
+  padding: 0em 0 3em;
+}
+.content_case2{
+  padding: 3em 2em;
+}
+.case2 img{
+  margin-bottom: 3em;
+  padding: 0em;
+ }
+ .case2 img:last-child{
+  margin-bottom: 0;
+  padding-bottom: 1em;
+ }
+.feature img{
+  margin-bottom: 3em;
+  padding: 0 2em;
+ }
+ .feature img:last-child{
+  margin-bottom: 0;
+  padding-bottom: 3em;
+ }
+ .text_profile{
+  padding: 1em;
+ }
+ .text_profile p{
+  padding: 0.5em 0;
+ }
+ .profile{
+  padding-bottom: 2em;
+ }
+/*
+ *		class-name　案件ごとのコンテンツ内容　ここまで
+ */
+
+
+/***	formの設定	***/
+
+.form {
+  margin: 0 auto;
+}
+
+.form_title {
+  padding: 1.5em;
+}
+.submit {
+  margin: 0 auto;
+	padding: 10px 0 40px;
+	padding: 1.5vw;
+	width: 96%;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+	background: #fff;
+}
+.submit .btn {
+	display: block;
+	margin: 4% auto;
+	width: 96%;
+}
+.deco {
+	display: block;
+	margin: 1.5vw auto;
+	padding: 1% 1.5vw;
+	width: 96%;
+	height: 4em;
+	border: 4px solid #1897c6;
+	background: #fff;
+	color: #1698c7;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+}
+.deco::placeholder {
+	color: #AAA;
+}
+
+.btn {
+	filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+	animation-name: btn-animation;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+  margin-top: -31%;
+  padding: 0 2em;
+}
+
+.btn:hover {
+	animation-duration: 0.8s;
+}
+
+/***	常時表示ボタン設定	***/
+
+.flbtn {
+	position: fixed;
+	left: 2vw;
+	bottom: 0em;
+}
+
+.flbtn a {
+	display: block;
+	width: 96vw;
+	height: calc((264 / 890) * 100vw);
+	background: url(../image/button.png) no-repeat;
+	background-size: 100%;
+	text-indent: -9999px;
+
+	animation-name: btn-animation;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-delay: 0.6s;
+
+	filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes btn-animation {
+  0% {
+    transform: translateY(0em);
+  }
+  40% {
+    transform: translateY(0em);
+  }
+  50% {
+    transform: translateY(-0.8em);
+  }
+  60% {
+    transform: translateY(0em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
+}
+/* テキストのアニメーション(透過率変更) */
+@keyframes blinkOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+/* .text-opacity {
+  animation: blinkOpacity 1s ease-in-out infinite alternate;
+} */
+
+/***	余白調整用設定	***/
+
+.ptb_01{
+  padding: 1em 0;
+}
+.ptb_02{
+  padding: 2em 0;
+}
+.ptb_03{
+  padding: 3em 0;
+}
+.ptb_04{
+  padding: 4em 0;
+}
+.ptb_05{
+  padding: 5em 0;
+}
+
+.pt_01{
+  padding-top: 1em;
+}
+.pt_02{
+  padding-top: 2em;
+}
+.pt_03{
+  padding-top: 3em;
+}
+.pt_04{
+  padding-top: 4em;
+}
+.pt_05{
+  padding-top: 5em;
+}
+
+
+.pb_01{
+  padding-bottom: 1em;
+}
+.pb_02{
+  padding-bottom: 2em;
+}
+.pb_03{
+  padding-bottom: 3em;
+}
+.pb_04{
+  padding-bottom: 4em;
+}
+.pb_05{
+  padding-bottom: 5em;
+}
+
+/***	スマホ用見出しサイズ調整用	***/
+.sp_50{
+  width: 50%;
+}
+.sp_60{
+  width: 60%;
+}
+.sp_70{
+  width: 70%;
+}
+.sp_80{
+  width: 80%;
+}
+.sp_85{
+  width: 85%;
+}
+.sp_90{
+  width: 90%;
+}
+.sp_95{
+  width: 95%;
+}
+
+
+@media screen and (min-width: 600px) {	/***	幅600px以上に適用：タブレット	***/
+}
+
+
+@media screen and (min-width: 1024px) {	/***	幅1024px以上に適用：PC・iPadPro	***/
+
+	body {
+		font-size: 112.5%;		/* 18px */
+		font-size: 125%;		/* 20px */
+	}
+  header{
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+	h2 {
+    padding: 100px 25px;
+	}
+
+	footer {
+		padding-bottom: 1em;
+	}
+
+	/***	テキスト装飾設定	***/
+
+	.large {
+		font-size: 120%;
+	}
+
+	.xlarge {
+		font-size: 144%;
+	}
+
+	.xxlarge {
+		font-size: 172.8%;
+	}
+
+	.small {
+		font-size: 82.5%;
+	}
+
+	.xsmall {
+		font-size: 62.5%;
+	}
+
+	.xxsmall {
+		font-size: 56.25%;
+	}
+
+  .text {
+    margin: 0 auto;
+  }
+
+  /* ボックスモデル */
+  .container{
+  width: 1000px;
+  margin: 0 auto;
+  }
+  
+  .container_750{
+    max-width: 750px;
+    margin: 0 auto;
+    }
+  
+  /***　中央揃え　***/
+  .center{
+    text-align: center;
+  }
+  
+  /* 白背景 */
+  .white_box{
+    background-color: #fff;
+    max-width: 900px;
+    border-radius: 0px;
+    margin: 0em auto;
+    padding: 2em 0.5em;
+  }
+  .movie{
+    width: 800px;
+    height: 450px;
+  }
+  
+
+
+	/*
+ 	*		form
+	*/
+
+	.form {
+		padding: ;
+	}
+
+	.submit {
+		padding: 10px 0 40px;
+		width: 920px;
+	}
+
+	.submit .btn {
+		margin: 25px auto 0;
+		width: initial;
+	}
+
+	.deco {
+		margin: 30px auto 0;
+		margin-bottom: 20px;
+		padding: 10px 6px 4px;
+		width: 840px;
+		height: 108px;
+		font-size: 1.5em;
+	}
+
+
+	/***	常時表示ボタン設定	***/
+	.flbtn {
+		bottom: 1em;
+		right: 0.5em;
+		left: auto;
+	}
+
+	.flbtn a {
+		width: 336px;
+		height: 81px;
+		background: url(../image/button.png) no-repeat;
+		background-size: 100%;
+	}
+  /***	余白調整用設定	***/
+
+.ptb_01{
+  padding: 1em 0;
+}
+.ptb_02{
+  padding: 2em 0;
+}
+.ptb_03{
+  padding: 3em 0;
+}
+.ptb_04{
+  padding: 4em 0;
+}
+.ptb_05{
+  padding: 5em 0;
+}
+
+.pt_01{
+  padding-top: 1em;
+}
+.pt_02{
+  padding-top: 2em;
+}
+.pt_03{
+  padding-top: 3em;
+}
+.pt_04{
+  padding-top: 4em;
+}
+.pt_05{
+  padding-top: 5em;
+}
+
+
+.pb_01{
+  padding-bottom: 1em;
+}
+.pb_02{
+  padding-bottom: 2em;
+}
+.pb_03{
+  padding-bottom: 3em;
+}
+.pb_04{
+  padding-bottom: 4em;
+}
+.pb_05{
+  padding-bottom: 5em;
+}
+
+}
+
+
+/*
+ *		特商法
+ */
+.page_laws #wrapper {
+  margin: 0 auto 2em;
+  padding: 3em;
+  width: 800px;
+  background: #fff;
+  max-width: 100%;
+  font-size: 75%;
+}
+.page_laws #wrapper h2 {
+  margin: 0 auto;
+  font-size: 2em;
+  text-align: center;
+}
+.page_laws #wrapper h3 {
+  margin-top: 2em;
+  font-size: 1.25em;
+  padding: 0.5em 0;
+  text-align: left;
+  border-top: none;
+  border-bottom: none;
+  color:#333;
+}
+.page_laws #wrapper h4 {
+  margin-top: 2em;
+}
+
+
+.page_laws table {
+  margin: 1.5em auto;
+  border-collapse: separate;
+  border-spacing: 1px;
+  background: #ccc;
+}
+.page_laws th {
+  padding: 0.5em;
+  width: 28%;
+  border-top: 1px solid #fff;
+  background-color: #EBEBEB;
+}
+.page_laws td {
+  padding: 0.5em;
+  font-size: 0.8em;
+  background-color: #FFFFFF;
+}
