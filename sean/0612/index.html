@@ -33,29 +33,7 @@ fbq('init', '1452515812781300');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1452515812781300&ev=PageView&noscript=1"></noscript>
-<!-- End Meta Pixel Code -->    <script>
-        function golink(){
-            fbq('track', 'AddToCart');            var xmlhttp;
-            if (window.XMLHttpRequest)
-            {
-                xmlhttp=new XMLHttpRequest();
-            }
-            else
-            {
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.open("GET","dj2-ajax.php",true);
-            xmlhttp.send();
-            xmlhttp.onreadystatechange=function()
-            {
-                if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                {
-                    var sjline = xmlhttp.responseText;
-                    window.location.href =sjline;
-                }
-            }
-        }
-    </script>
+<!-- End Meta Pixel Code -->   
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preload" href="static/css/dd07bd6e15e0480f9115674cff3e96b7.css" as="style" onload="this.onload = null; this.rel = 'stylesheet';">
     <link rel="preload" href="static/js/ladipagev3.min.js" as="script">
