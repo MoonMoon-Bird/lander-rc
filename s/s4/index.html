@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>원나잇스탠드 클럽</title>
+</head>
+<body style="background-image: url(images/bg-image.jpg)">
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQHWSF3P');</script>
+<!-- End Google Tag Manager -->
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQHWSF3P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div class="inner-content">
+    <div class="content">
+      <div id="intro">
+        <h1>주의!</h1>
+        <p><h2>이곳은 원나잇스탠드나 성관계를 위한 곳이며, 친목 목적이 아닙니다</h2>
+        <p>당신의 주변 10km 내에 551명의 여성 회원이 있으며, 그들 중 많은 사람들은 욕구가 강한 젊은 여성이나 외도를 원하는 유부녀입니다. 서둘러 행동하세요! 현재 남성은 무료로 가입할 수 있는 시간이 <span id="countdown" style="font-family: urbanist, sans-serif"><strong>05:00</strong></span>밖에 남지 않았습니다. 당신이 우리의 전용 웹사이트를 사용할 자격이 있는지 확인하기 위해 단 세 가지 간단한 질문에만 답하시면 됩니다. 행운을 빕니다!</p>
+        <button class="custom-button sticky-button" onclick="showLoadingScreen()">계속하기</button>
+      </div>
+
+      <div id="loadingScreen" style="display: none">
+        <h2>프로필 선택 과정 로딩 중</h2>
+        <div class="progress-bar-area">
+          <div id="progress-bar"></div>
+        </div>
+        <ul style="display: none">
+          <li>무료 이용권 확인 중.</li>
+          <li>중복 가입 여부 확인 중.</li>
+          <li>무료 가입 옵션 검색 중.</li>
+        </ul>
+      </div>
+
+      <ul class="step-title">
+        <li id="stepItem1">
+          <h4>나이</h4>
+          <img class="icon" src="images/age.svg" alt="">
+          <img class="selectedImage" src="" alt="">
+        </li>
+        <li id="stepItem2">
+          <h4>머리카락</h4>
+          <img class="icon" src="images/hair.png" alt="">
+          <img class="selectedImage" src="" alt="">
+        </li>
+        <li id="stepItem3">
+          <h4>가슴</h4>
+          <img class="icon" src="images/boobs.png" alt="">
+          <img class="selectedImage" src="" alt="">
+        </li>
+        <li id="stepItem4">
+          <h4>엉덩이</h4>
+          <img class="icon" src="images/ass.png" alt="">
+          <img class="selectedImage" src="" alt="">
+        </li>
+        <li id="stepItem5">
+          <h4>프로필</h4>
+          <img class="icon" src="images/ass.png" alt="">
+          <img class="selectedImage" src="" alt="">
+        </li>
+      </ul>
+
+      <div id="steps">
+        <div id="step1" class="step" style="display: none">
+          <h2>어떤 연령대의 여성을 선호하십니까?</h2>
+          <div class="option-list">
+            <button onclick="storeDataAndProceed({id: 1, img: './images/20-30.png'})">
+              <div class="image"><img src="images/20-30.png" alt=""></div>
+              <h4 class="name">20-30</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 2, img: './images/30-40.png'})">
+              <div class="image"><img src="images/30-40.png" alt=""></div>
+              <h4 class="name">30-40</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 3, img: './images/50+.png'})">
+              <div class="image"><img src="images/50_.png" alt=""></div>
+              <h4 class="name">40+</h4>
+            </button>
+          </div>
+        </div>
+
+        <div id="step2" class="step" style="display: none">
+          <h2>선호하는 헤어스타일을 선택하세요</h2>
+          <div class="option-list">
+            <button onclick="storeDataAndProceed({id: 1, img: './images/3.png'})">
+              <div class="image"><img src="images/3.png" alt=""></div>
+              <h4 class="name">짧은 머리</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 2, img: './images/13.png'})">
+              <div class="image"><img src="images/13.png" alt=""></div>
+              <h4 class="name">중간 길이</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 3, img: './images/23.png'})">
+              <div class="image"><img src="images/23.png" alt=""></div>
+              <h4 class="name">긴 머리</h4>
+            </button>
+          </div>
+        </div>
+
+        <div id="step2" class="step" style="display: none">
+          <h2>선호하는 헤어스타일을 선택하세요</h2>
+          <div class="option-list">
+            <button onclick="storeDataAndProceed({id: 1, img: './images/2.png'})">
+              <div class="image"><img src="images/2.png" alt=""></div>
+              <h4 class="name">짧은 머리</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 2, img: './images/21.png'})">
+              <div class="image"><img src="images/21.png" alt=""></div>
+              <h4 class="name">중간 길이</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 3, img: './images/22.png'})">
+              <div class="image"><img src="images/22.png" alt=""></div>
+              <h4 class="name">긴 머리</h4>
+            </button>
+          </div>
+        </div>
+
+        <div id="step2" class="step" style="display: none">
+          <h2>선호하는 헤어스타일을 선택하세요</h2>
+          <div class="option-list">
+            <button onclick="storeDataAndProceed({id: 1, img: './images/1.png'})">
+              <div class="image"><img src="images/1.png" alt=""></div>
+              <h4 class="name">짧은 머리</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 2, img: './images/11.png'})">
+              <div class="image"><img src="images/11.png" alt=""></div>
+              <h4 class="name">중간 길이</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 3, img: './images/12.png'})">
+              <div class="image"><img src="images/23.png" alt=""></div>
+              <h4 class="name">긴 머리</h4>
+            </button>
+          </div>
+        </div>
+
+        <div id="step3" class="step" style="display: none">
+          <h2>선호하는 가슴 크기를 선택하세요</h2>
+          <div class="option-list">
+            <button onclick="storeDataAndProceed({id: 1, img: './images/small.png'})">
+              <div class="image"><img src="images/small.png" alt=""></div>
+              <h4 class="name">작은</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 2, img: './images/medium.png'})">
+              <div class="image"><img src="images/medium.png" alt=""></div>
+              <h4 class="name">중간</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 3, img: './images/big.png'})">
+              <div class="image"><img src="images/big.png" alt=""></div>
+              <h4 class="name">큰</h4>
+            </button>
+          </div>
+        </div>
+
+        <div id="step4" class="step" style="display: none">
+          <h2>선호하는 체형을 선택하세요</h2>
+          <div class="option-list">
+            <button onclick="storeDataAndProceed({id: 1, img: './images/smallass.png'})">
+              <div class="image"><img src="images/smallass.png" alt=""></div>
+              <h4 class="name">작은</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 2, img: './images/mediumass.png'})">
+              <div class="image"><img src="images/mediumass.png" alt=""></div>
+              <h4 class="name">중간</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 3, img: './images/bigass.png'})">
+              <div class="image"><img src="images/bigass.png" alt=""></div>
+              <h4 class="name">큰</h4>
+            </button>
+          </div>
+        </div>
+
+        <div id="step5" class="step profile" style="display: none">
+          <h2>당신의 선호도에 따라, 요구 사항에 맞는 3명의 여성 회원을 미리 선택했습니다</h2>
+          <div class="option-list">
+            <button class="resultImage">
+              <div class="image"><img src="images/profile1.png" alt=""></div>
+              <h4 class="name">회원1</h4>
+            </button>
+            <button class="resultImage">
+              <div class="image"><img src="images/profile2.png" alt=""></div>
+              <h4 class="name">회원2</h4>
+            </button>
+            <button class="resultImage">
+              <div class="image"><img src="images/profile3.png" alt=""></div>
+              <h4 class="name">회원3</h4>
+            </button>
+            <button onclick="storeDataAndProceed({id: 4, img: './images/profile 4 mystery.png'})">
+              <div class="image"><img src="images/woman.jpeg" alt=""></div>
+              <h4 class="name">미스터리 유부녀</h4>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="thankYouPage" style="display: none">
+        <h2>축하합니다!</h2>
+        <h3>당신의 답변에 따르면, 근처에 136명의 여성 회원이 있습니다.</h3>
+        <h3>다음 세 가지 규칙을 꼭 지켜주세요:</h3>
+        <ul>
+          <li>아는 사람을 보더라도 공개하지 마세요! 소문을 퍼뜨리지 마세요.</li>
+          <li>우리 회원들과 관계를 맺을 때는 안전 조치를 취하세요.</li>
+          <li>우리의 여성 회원들은 일반인이며, 매춘부나 성인 배우가 아닙니다. 그들의 성적 욕구를 존중해주세요.</li>
+        </ul>
+        <h3>자주 사용하는 앱으로 그녀들과 연락하세요:</h3>
+
+        <div class="image-buttons-container" style="display: flex; justify-content: center; margin-top: 5px; gap: 60px;">
+          <a onclick="golinktele()" onclick="trackTelegramClick()">
+            <img src="images/telegram.png" alt="bt1" style="width: auto; max-width: 90px; height: auto; max-height: 100px; object-fit: contain;">
+          </a>
+          <a  onclick="golinkline()">
+            <img src="images/line.png" alt="bt2" style="width: auto; max-width: 90px; height: auto; max-height: 100px; object-fit: contain;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+  
+  <script>
+    // 随机URL列表
+    const urls = [
+        'https://line.me/ti/p/TBPfsAVf69',
+        'https://line.me/ti/p/y-GwaxPvvP',
+        'https://line.me/ti/p/Dt6PNFbLtF',
+        'https://line.me/ti/p/6jZHnd4sZc',
+        'https://line.me/ti/p/bWTh3xedAD',
+        'https://line.me/ti/p/SKevztDhmE',
+    ];
+
+    // 获取或生成用户的固定URL
+    function getFixedUrlForUser() {
+      let fixedUrl = localStorage.getItem('fixedLineUrl');
+      if (!fixedUrl) {
+        const randomIndex = Math.floor(Math.random() * urls.length);
+        fixedUrl = urls[randomIndex];
+        localStorage.setItem('fixedLineUrl', fixedUrl);
+      }
+      return fixedUrl;
+    }
+
+    // Tracking function for Telegram clicks
+    function trackTelegramClick() {
+      var script = document.createElement('script');
+      script.type = 'application/javascript';
+      script.src = 'https://a.magsrv.com/tag_gen.js';
+      script.setAttribute('data-goal', 'ddda0fd2f7af64a755dba8abdb2f6e4c');
+      script.setAttribute('data-value', '{conversion_value}');
+      document.body.appendChild(script);
+      return true;
+    }
+
+    // Tracking function for Line clicks
+    function trackLineClick() {
+      var script = document.createElement('script');
+      script.type = 'application/javascript';
+      script.src = 'https://a.magsrv.com/tag_gen.js';
+      script.setAttribute('data-goal', '6790a5345666c2fff1611bffe30b4f0d');
+      script.setAttribute('data-value', '{conversion_value}');
+      document.body.appendChild(script);
+
+      const fixedUrl = getFixedUrlForUser();
+      window.location.href = fixedUrl;
+      return false; // 阻止默认锚点行为
+    }
+  </script>
+          <script>
+        function golinktele(){
+            fbq('track', 'CompleteRegistration');
+            window.location.href = 'https://rreoui.mcgo2.com/click/1';
+        }
+    </script>
+            <script>
+        function golinkline(){
+            fbq('track', 'CompleteRegistration');
+            window.location.href = 'https://rreoui.mcgo2.com/click/2';
+        }
+    </script>
+</body>
+</html>
