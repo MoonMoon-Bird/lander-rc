@@ -1,0 +1,2265 @@
+<!DOCTYPE HTML>
+<html lang="en-US" prefix="og: https://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <style>
+        .uael-main-btn {
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .uael-sec-1, .uael-sec-2 {
+            cursor: pointer
+        }
+
+        .elementor-widget-uael-content-toggle .uael-rbs-head-1, .elementor-widget-uael-content-toggle .uael-rbs-head-2 {
+            margin: 0;
+            padding: 0
+        }
+
+        .uael-ct-desktop-stack--yes .uael-rbs-toggle, .uael-rbs-toggle {
+            -js-display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 25px;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .uael-rbs-toggle {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+            -moz-box-orient: horizontal;
+            -moz-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row
+        }
+
+        .uael-rbs-toggle-sections {
+            padding: 25px
+        }
+
+        .uael-dual-button-wrap .elementor-button-content-wrapper .elementor-button-icon, .uael-dual-button-wrap .elementor-button-content-wrapper .elementor-button-text, .uael-marketing-button .elementor-button-content-wrapper .elementor-button-icon, .uael-marketing-button .elementor-button-content-wrapper .elementor-button-text, .uael-marketing-button .uael-marketing-buttons-all_left .elementor-button-content-wrapper .elementor-button-text, .uael-marketing-button .uael-marketing-buttons-all_left .elementor-button-content-wrapper .uael-marketing-buttons-wrap, .uael-marketing-button .uael-marketing-buttons-all_right .elementor-button-content-wrapper .elementor-button-text, .uael-marketing-button .uael-marketing-buttons-all_right .elementor-button-content-wrapper .uael-marketing-buttons-wrap {
+            display: inline-block
+        }
+
+        .uael-button-halign-justify .uael-button-wrapper, .uael-dual-button-wrap, .uael-dual-button-wrap .elementor-button-content-wrapper, .uael-marketing-button .elementor-button-content-wrapper {
+            -js-display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex
+        }
+
+        .uael-dual-button-wrap .elementor-button-content-wrapper.uael-buttons-icon-right, .uael-marketing-button .elementor-button-content-wrapper.uael-buttons-icon-right {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+            -moz-box-orient: horizontal;
+            -moz-box-direction: reverse
+        }
+
+        .uael-button-halign-center .uael-dual-button-wrap, .uael-dual-button-wrap .elementor-button-content-wrapper, .uael-marketing-button .elementor-button-content-wrapper, .uael-marketing-button .uael-marketing-buttons-all_left.elementor-button, .uael-marketing-button .uael-marketing-buttons-all_right.elementor-button, .uael-mbutton-text-center .elementor-button-content-wrapper {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center
+        }
+
+        .uael-button-stack-desktop.uael-button-halign-center .uael-dual-button-wrap, .uael-dual-button-wrap, .uael-mbutton-text-center .elementor-button-content-wrapper, .uael-mbutton-text-left .elementor-button-content-wrapper, .uael-mbutton-text-left .elementor-button-content-wrapper .elementor-align-icon-right, .uael-mbutton-text-right .elementor-button-content-wrapper, .uael-mbutton-text-right .elementor-button-content-wrapper .elementor-align-icon-right {
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .uael-marketing-button .uael-marketing-button-title {
+            font-weight: 700
+        }
+
+        .uael-marketing-button .elementor-button-content-wrapper {
+            margin-bottom: 7px
+        }
+
+        .uael-marketing-buttons-wrap .elementor-button-text {
+            -webkit-box-flex: 0;
+            -webkit-flex-grow: 0;
+            -moz-box-flex: 0;
+            -ms-flex-positive: 0;
+            flex-grow: 0
+        }
+
+        .uael-marketing-button a {
+            position: relative;
+            overflow: hidden;
+            vertical-align: top;
+            z-index: 1
+        }
+
+        span.uael_btn__blink {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-border-radius: 8px;
+            border-radius: 8px
+        }
+
+        span.uael_btn__blink:after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            bottom: -50%;
+            left: -50%;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(229, 172, 142, 0)), color-stop(50%, rgba(255, 255, 255, .7)), color-stop(50%, rgba(229, 172, 142, 0)));
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(229, 172, 142, 0)), color-stop(50%, rgba(255, 255, 255, .7)), to(rgba(229, 172, 142, 0)));
+            background: -webkit-linear-gradient(top, rgba(229, 172, 142, 0), rgba(255, 255, 255, .7) 50%, rgba(229, 172, 142, 0));
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(229, 172, 142, 0)), color-stop(50%, rgba(255, 255, 255, .7)), to(rgba(229, 172, 142, 0)));
+            background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, .7) 50%, rgba(229, 172, 142, 0));
+            -webkit-transform: rotateZ(60deg) translate(-5em, 7.5em);
+            -ms-transform: rotate(60deg) translate(-5em, 7.5em);
+            transform: rotateZ(60deg) translate(-5em, 7.5em);
+            -webkit-animation: sheens 3s infinite;
+            animation: sheens 3s infinite;
+            z-index: -1
+        }
+
+        .elementor-widget-uael-price-table .elementor-widget-container {
+            overflow: hidden;
+            background-color: #f9f9f9
+        }
+
+        .uael-price-table-feature-content {
+            -js-display: inline-flex;
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -moz-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .uael-price-features-simple .uael-price-table-feature-content {
+            padding: 10px 20px
+        }
+
+        .uael-pricing-style-1 .uael-price-table-header, .uael-pricing-style-2 .uael-price-table-header, .uael-pricing-style-3 .uael-pricing-heading-wrap, .uael-pricing-style-4 .uael-price-table-header {
+            padding: 20px
+        }
+
+        .uael-price-table .uael-price-table-cta, .uael-pricing-style-1 .uael-price-table-price-wrap, .uael-pricing-style-4 .uael-price-table-price-wrap {
+            padding: 40px 20px
+        }
+
+        .uael-module-content.uael-price-table-container {
+            position: relative
+        }
+
+        .uael-price-table {
+            text-align: center
+        }
+
+        .uael-price-table .uael-price-table-heading {
+            margin: 0;
+            padding: 0
+        }
+
+        .uael-pricing-duration {
+            padding: 0 4px
+        }
+
+        .uael-price-table .uael-price-table-original-price {
+            margin-right: 15px;
+            text-decoration: line-through;
+            font-size: .5em;
+            line-height: 1;
+            font-weight: 400;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center
+        }
+
+        .uael-price-table .uael-pricing-value {
+            color: #555;
+            font-weight: 600;
+            font-size: 65px
+        }
+
+        .uael-price-table .uael-price-table-pricing .uael-price-typo-excluded {
+            line-height: initial;
+            letter-spacing: initial;
+            text-transform: initial;
+            font-weight: initial;
+            font-size: initial;
+            font-style: initial
+        }
+
+        .tooltipster-base.uael-tooltipster-active.uael-price-table-tooltip, .uael-price-table .uael-price-table-beside-price, .uael-price-table-price-wrap, .uael-pricing-value {
+            -js-display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex
+        }
+
+        .uael-price-table .uael-price-table-beside-price {
+            text-align: left;
+            -webkit-box-align: start;
+            -webkit-align-items: flex-start;
+            -moz-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -moz-box-orient: vertical;
+            -moz-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .uael-price-heading-icon, .uael-pricing-container {
+            line-height: 1em;
+            display: inline-block;
+            vertical-align: middle
+        }
+
+        .uael-price-table .uael-price-currency-normal, .uael-price-table .uael-price-table-integer-part {
+            line-height: 1em
+        }
+
+        .uael-price-table .uael-price-table-currency, .uael-price-table .uael-price-table-fractional-part {
+            line-height: 1.2em;
+            font-size: .4em
+        }
+
+        .uael-price-table .uael-price-table-currency {
+            margin-right: 2px
+        }
+
+        .uael-price-table .uael-price-table-beside-price {
+            margin-left: 2px
+        }
+
+        .uael-price-table .uael-price-table-duration {
+            width: 100%;
+            font-size: 13px;
+            font-weight: 400
+        }
+
+        .uael-price-table .uael-price-table-features-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            line-height: 1
+        }
+
+        .uael-price-table-price-wrap, .uael-pricing-value {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+            -moz-box-orient: horizontal;
+            -moz-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row
+        }
+
+        .uael-price-table-ribbon-content {
+            z-index: 9;
+            background: #000;
+            color: #fff
+        }
+
+        .elementor-widget-uael-price-table .elementor-widget-container {
+            overflow: visible !important
+        }
+
+        .uael-price-table-ribbon-3 .uael-price-table-ribbon-content:after, .uael-price-table-ribbon-3 .uael-price-table-ribbon-content:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 100%;
+            right: 0;
+            border-bottom: 8px solid transparent
+        }
+
+        .uael-price-table-ribbon-3 .uael-price-table-ribbon-content:after {
+            border-left: 8px solid rgba(0, 0, 0, .2)
+        }
+
+        .uael-price-table-ribbon-3 .uael-price-table-ribbon-content {
+            text-align: center;
+            -webkit-border-radius: 4px;
+            border-radius: 4px 4px 0 4px;
+            padding: 3px 15px;
+            position: absolute;
+            top: 30%;
+            right: -8px
+        }</style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <script data-cfasync="false" type="text/javascript">var _vwo_clicks = 10</script>
+    <title>Professional investor exchange community</title>
+    <meta name="description" content="Discover explosive trading opportunities with BlackBoxStocks! Our user-friendly platform offers automated tools for stocks and options.">
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <link rel="canonical" href="https://blackboxstocks.com/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BlackBoxStocks - Ultimate Tool for Traders">
+    <meta property="og:description" content="Discover explosive trading opportunities with BlackBoxStocks! Our user-friendly platform offers automated tools for stocks and options.">
+    <meta property="og:url" content="https://blackboxstocks.com/">
+    <meta property="og:site_name" content="BlackBoxStocks">
+    <meta property="og:updated_time" content="2023-10-04T18:38:11+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BlackBoxStocks - Ultimate Tool for Traders">
+    <meta name="twitter:description" content="Discover explosive trading opportunities with BlackBoxStocks! Our user-friendly platform offers automated tools for stocks and options.">
+    <link rel="dns-prefetch" href="https://js.hs-scripts.com/">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <link href="https://fonts.gstatic10152305z.com/" crossorigin="" rel="preconnect">
+    <link rel="stylesheet" id="astra-theme-css-css" href="awsd/frontend.min.css" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/frontend.min.css" media="all">
+    <style id="global-styles-inline-css">body {
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--color--ast-global-color-0: var(--ast-global-color-0);
+        --wp--preset--color--ast-global-color-1: var(--ast-global-color-1);
+        --wp--preset--color--ast-global-color-2: var(--ast-global-color-2);
+        --wp--preset--color--ast-global-color-3: var(--ast-global-color-3);
+        --wp--preset--color--ast-global-color-4: var(--ast-global-color-4);
+        --wp--preset--color--ast-global-color-5: var(--ast-global-color-5);
+        --wp--preset--color--ast-global-color-6: var(--ast-global-color-6);
+        --wp--preset--color--ast-global-color-7: var(--ast-global-color-7);
+        --wp--preset--color--ast-global-color-8: var(--ast-global-color-8);
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+        --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+        --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+        --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+        --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+        --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1)
+    }
+
+    body {
+        margin: 0;
+        --wp--style--global--content-size: var(--wp--custom--ast-content-width-size);
+        --wp--style--global--wide-size: var(--wp--custom--ast-wide-width-size)
+    }
+
+    .wp-site-blocks > .alignleft {
+        float: left;
+        margin-right: 2em
+    }
+
+    .wp-site-blocks > .alignright {
+        float: right;
+        margin-left: 2em
+    }
+
+    .wp-site-blocks > .aligncenter {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    :where(.wp-site-blocks) > * {
+        margin-block-start: 24px;
+        margin-block-end: 0
+    }
+
+    :where(.wp-site-blocks) > :first-child:first-child {
+        margin-block-start: 0
+    }
+
+    :where(.wp-site-blocks) > :last-child:last-child {
+        margin-block-end: 0
+    }
+
+    body {
+        --wp--style--block-gap: 24px
+    }
+
+    :where(body .is-layout-flow) > :first-child:first-child {
+        margin-block-start: 0
+    }
+
+    :where(body .is-layout-flow) > :last-child:last-child {
+        margin-block-end: 0
+    }
+
+    :where(body .is-layout-flow) > * {
+        margin-block-start: 24px;
+        margin-block-end: 0
+    }
+
+    :where(body .is-layout-constrained) > :first-child:first-child {
+        margin-block-start: 0
+    }
+
+    :where(body .is-layout-constrained) > :last-child:last-child {
+        margin-block-end: 0
+    }
+
+    :where(body .is-layout-constrained) > * {
+        margin-block-start: 24px;
+        margin-block-end: 0
+    }
+
+    :where(body .is-layout-flex) {
+        gap: 24px
+    }
+
+    :where(body .is-layout-grid) {
+        gap: 24px
+    }
+
+    body .is-layout-flow > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em
+    }
+
+    body .is-layout-flow > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0
+    }
+
+    body .is-layout-flow > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important
+    }
+
+    body .is-layout-constrained > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em
+    }
+
+    body .is-layout-constrained > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0
+    }
+
+    body .is-layout-constrained > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important
+    }
+
+    body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        max-width: var(--wp--style--global--content-size);
+        margin-left: auto !important;
+        margin-right: auto !important
+    }
+
+    body .is-layout-constrained > .alignwide {
+        max-width: var(--wp--style--global--wide-size)
+    }
+
+    body .is-layout-flex {
+        display: flex
+    }
+
+    body .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center
+    }
+
+    body .is-layout-flex > * {
+        margin: 0
+    }
+
+    body .is-layout-grid {
+        display: grid
+    }
+
+    body .is-layout-grid > * {
+        margin: 0
+    }
+
+    body {
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0
+    }
+
+    a:where(:not(.wp-element-button)) {
+        text-decoration: none
+    }
+    </style>
+    <style id="astra-addon-css-inline-css">#content:before {
+        content: "921";
+        position: absolute;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden
+    }
+
+    .single .ast-author-details .author-title {
+        color: var(--ast-global-color-1)
+    }
+
+    @media (max-width: 921px) {
+        .single.ast-separate-container .ast-author-meta {
+            padding: 1.5em 2.14em
+        }
+
+        .single .ast-author-meta .post-author-avatar {
+            margin-bottom: 1em
+        }
+
+        .ast-separate-container .ast-grid-2 .ast-article-post, .ast-separate-container .ast-grid-3 .ast-article-post, .ast-separate-container .ast-grid-4 .ast-article-post {
+            width: 100%
+        }
+
+        .blog-layout-1 .post-content, .blog-layout-1 .ast-blog-featured-section {
+            float: none
+        }
+
+        .ast-separate-container .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .square .posted-on {
+            margin-top: 0
+        }
+
+        .ast-separate-container .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .circle .posted-on {
+            margin-top: 1em
+        }
+
+        .ast-separate-container .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-content .ast-blog-featured-section:first-child .post-thumb-img-content {
+            margin-top: -1.5em
+        }
+
+        .ast-separate-container .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-thumb-img-content {
+            margin-left: -2.14em;
+            margin-right: -2.14em
+        }
+
+        .ast-separate-container .ast-article-single.remove-featured-img-padding .single-layout-1 .entry-header .post-thumb-img-content:first-child {
+            margin-top: -1.5em
+        }
+
+        .ast-separate-container .ast-article-single.remove-featured-img-padding .single-layout-1 .post-thumb-img-content {
+            margin-left: -2.14em;
+            margin-right: -2.14em
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .square .posted-on, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .square .posted-on, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .square .posted-on {
+            margin-left: -1.5em;
+            margin-right: -1.5em
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .circle .posted-on, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .circle .posted-on, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .circle .posted-on {
+            margin-left: -.5em;
+            margin-right: -.5em
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .square .posted-on, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .square .posted-on, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .square .posted-on {
+            margin-top: 0
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .circle .posted-on, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .circle .posted-on, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .circle .posted-on {
+            margin-top: 1em
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-content .ast-blog-featured-section:first-child .post-thumb-img-content, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-content .ast-blog-featured-section:first-child .post-thumb-img-content, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-content .ast-blog-featured-section:first-child .post-thumb-img-content {
+            margin-top: -1.5em
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-thumb-img-content, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-thumb-img-content, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-thumb-img-content {
+            margin-left: -1.5em;
+            margin-right: -1.5em
+        }
+
+        .blog-layout-2 {
+            display: flex;
+            flex-direction: column-reverse
+        }
+
+        .ast-separate-container .blog-layout-3, .ast-separate-container .blog-layout-1 {
+            display: block
+        }
+
+        .ast-plain-container .ast-grid-2 .ast-article-post, .ast-plain-container .ast-grid-3 .ast-article-post, .ast-plain-container .ast-grid-4 .ast-article-post, .ast-page-builder-template .ast-grid-2 .ast-article-post, .ast-page-builder-template .ast-grid-3 .ast-article-post, .ast-page-builder-template .ast-grid-4 .ast-article-post {
+            width: 100%
+        }
+    }
+
+    @media (max-width: 921px) {
+        .ast-separate-container .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .square .posted-on {
+            margin-top: 0;
+            margin-left: -2.14em
+        }
+
+        .ast-separate-container .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .circle .posted-on {
+            margin-top: 0;
+            margin-left: -1.14em
+        }
+    }
+
+    @media (min-width: 922px) {
+        .ast-separate-container.ast-blog-grid-2 .ast-archive-description, .ast-separate-container.ast-blog-grid-3 .ast-archive-description, .ast-separate-container.ast-blog-grid-4 .ast-archive-description {
+            margin-bottom: 1.33333em
+        }
+
+        .blog-layout-2.ast-no-thumb .post-content, .blog-layout-3.ast-no-thumb .post-content {
+            width: calc(100% - 5.714285714em)
+        }
+
+        .blog-layout-2.ast-no-thumb.ast-no-date-box .post-content, .blog-layout-3.ast-no-thumb.ast-no-date-box .post-content {
+            width: 100%
+        }
+
+        .ast-separate-container .ast-grid-2 .ast-article-post.ast-separate-posts, .ast-separate-container .ast-grid-3 .ast-article-post.ast-separate-posts, .ast-separate-container .ast-grid-4 .ast-article-post.ast-separate-posts {
+            border-bottom: 0
+        }
+
+        .ast-separate-container .ast-grid-2 > .site-main > .ast-row, .ast-separate-container .ast-grid-3 > .site-main > .ast-row, .ast-separate-container .ast-grid-4 > .site-main > .ast-row {
+            margin-left: 0;
+            margin-right: 0;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: stretch
+        }
+
+        .ast-separate-container .ast-grid-2 > .site-main > .ast-row:before, .ast-separate-container .ast-grid-2 > .site-main > .ast-row:after, .ast-separate-container .ast-grid-3 > .site-main > .ast-row:before, .ast-separate-container .ast-grid-3 > .site-main > .ast-row:after, .ast-separate-container .ast-grid-4 > .site-main > .ast-row:before, .ast-separate-container .ast-grid-4 > .site-main > .ast-row:after {
+            flex-basis: 0%;
+            width: 0
+        }
+
+        .ast-separate-container .ast-grid-2 .ast-article-post, .ast-separate-container .ast-grid-3 .ast-article-post, .ast-separate-container .ast-grid-4 .ast-article-post {
+            display: flex;
+            padding: 0
+        }
+
+        .ast-plain-container .ast-grid-2 > .site-main > .ast-row, .ast-plain-container .ast-grid-3 > .site-main > .ast-row, .ast-plain-container .ast-grid-4 > .site-main > .ast-row, .ast-page-builder-template .ast-grid-2 > .site-main > .ast-row, .ast-page-builder-template .ast-grid-3 > .site-main > .ast-row, .ast-page-builder-template .ast-grid-4 > .site-main > .ast-row {
+            margin-left: -1em;
+            margin-right: -1em;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: stretch
+        }
+
+        .ast-plain-container .ast-grid-2 > .site-main > .ast-row:before, .ast-plain-container .ast-grid-2 > .site-main > .ast-row:after, .ast-plain-container .ast-grid-3 > .site-main > .ast-row:before, .ast-plain-container .ast-grid-3 > .site-main > .ast-row:after, .ast-plain-container .ast-grid-4 > .site-main > .ast-row:before, .ast-plain-container .ast-grid-4 > .site-main > .ast-row:after, .ast-page-builder-template .ast-grid-2 > .site-main > .ast-row:before, .ast-page-builder-template .ast-grid-2 > .site-main > .ast-row:after, .ast-page-builder-template .ast-grid-3 > .site-main > .ast-row:before, .ast-page-builder-template .ast-grid-3 > .site-main > .ast-row:after, .ast-page-builder-template .ast-grid-4 > .site-main > .ast-row:before, .ast-page-builder-template .ast-grid-4 > .site-main > .ast-row:after {
+            flex-basis: 0%;
+            width: 0
+        }
+
+        .ast-plain-container .ast-grid-2 .ast-article-post, .ast-plain-container .ast-grid-3 .ast-article-post, .ast-plain-container .ast-grid-4 .ast-article-post, .ast-page-builder-template .ast-grid-2 .ast-article-post, .ast-page-builder-template .ast-grid-3 .ast-article-post, .ast-page-builder-template .ast-grid-4 .ast-article-post {
+            display: flex
+        }
+
+        .ast-plain-container .ast-grid-2 .ast-article-post:last-child, .ast-plain-container .ast-grid-3 .ast-article-post:last-child, .ast-plain-container .ast-grid-4 .ast-article-post:last-child, .ast-page-builder-template .ast-grid-2 .ast-article-post:last-child, .ast-page-builder-template .ast-grid-3 .ast-article-post:last-child, .ast-page-builder-template .ast-grid-4 .ast-article-post:last-child {
+            margin-bottom: 2.5em
+        }
+
+        .single .ast-author-meta .ast-author-details {
+            display: flex
+        }
+    }
+
+    @media (min-width: 922px) {
+        .single .post-author-avatar, .single .post-author-bio {
+            float: left;
+            clear: right
+        }
+
+        .single .ast-author-meta .post-author-avatar {
+            margin-right: 1.33333em
+        }
+
+        .single .ast-author-meta .about-author-title-wrapper, .single .ast-author-meta .post-author-bio {
+            text-align: left
+        }
+
+        .blog-layout-2 .post-content {
+            padding-right: 2em
+        }
+
+        .blog-layout-2.ast-no-date-box.ast-no-thumb .post-content {
+            padding-right: 0
+        }
+
+        .blog-layout-3 .post-content {
+            padding-left: 2em
+        }
+
+        .blog-layout-3.ast-no-date-box.ast-no-thumb .post-content {
+            padding-left: 0
+        }
+
+        .ast-separate-container .ast-grid-2 .ast-article-post.ast-separate-posts:nth-child(2n+0), .ast-separate-container .ast-grid-2 .ast-article-post.ast-separate-posts:nth-child(2n+1), .ast-separate-container .ast-grid-3 .ast-article-post.ast-separate-posts:nth-child(2n+0), .ast-separate-container .ast-grid-3 .ast-article-post.ast-separate-posts:nth-child(2n+1), .ast-separate-container .ast-grid-4 .ast-article-post.ast-separate-posts:nth-child(2n+0), .ast-separate-container .ast-grid-4 .ast-article-post.ast-separate-posts:nth-child(2n+1) {
+            padding: 0 1em 0
+        }
+    }
+
+    @media (max-width: 544px) {
+        .ast-separate-container .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .circle .posted-on {
+            margin-top: .5em
+        }
+
+        .ast-separate-container .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-thumb-img-content, .ast-separate-container .ast-article-single.remove-featured-img-padding .single-layout-1 .post-thumb-img-content, .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .square .posted-on, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .square .posted-on, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .square .posted-on {
+            margin-left: -1em;
+            margin-right: -1em
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .circle .posted-on, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .circle .posted-on, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .circle .posted-on {
+            margin-left: -.5em;
+            margin-right: -.5em
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .circle .posted-on, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .circle .posted-on, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section:first-child .circle .posted-on {
+            margin-top: .5em
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-content .ast-blog-featured-section:first-child .post-thumb-img-content, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-content .ast-blog-featured-section:first-child .post-thumb-img-content, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-content .ast-blog-featured-section:first-child .post-thumb-img-content {
+            margin-top: -1.33333em
+        }
+
+        .ast-separate-container.ast-blog-grid-2 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-thumb-img-content, .ast-separate-container.ast-blog-grid-3 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-thumb-img-content, .ast-separate-container.ast-blog-grid-4 .ast-article-post.remove-featured-img-padding .blog-layout-1 .post-thumb-img-content {
+            margin-left: -1em;
+            margin-right: -1em
+        }
+
+        .ast-separate-container .ast-grid-2 .ast-article-post .blog-layout-1, .ast-separate-container .ast-grid-2 .ast-article-post .blog-layout-2, .ast-separate-container .ast-grid-2 .ast-article-post .blog-layout-3 {
+            padding: 1.33333em 1em
+        }
+
+        .ast-separate-container .ast-grid-3 .ast-article-post .blog-layout-1, .ast-separate-container .ast-grid-4 .ast-article-post .blog-layout-1 {
+            padding: 1.33333em 1em
+        }
+
+        .single.ast-separate-container .ast-author-meta {
+            padding: 1.5em 1em
+        }
+    }
+
+    @media (max-width: 544px) {
+        .ast-separate-container .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .square .posted-on {
+            margin-left: -1em
+        }
+
+        .ast-separate-container .ast-article-post.remove-featured-img-padding.has-post-thumbnail .blog-layout-1 .post-content .ast-blog-featured-section .circle .posted-on {
+            margin-left: -.5em
+        }
+    }
+
+    @media (min-width: 922px) {
+        .ast-hide-display-device-desktop {
+            display: none
+        }
+    }
+
+    @media (min-width: 545px) and (max-width: 921px) {
+        .ast-hide-display-device-tablet {
+            display: none
+        }
+    }
+
+    @media (max-width: 544px) {
+        .ast-hide-display-device-mobile {
+            display: none
+        }
+    }
+
+    .ast-article-post .ast-date-meta .posted-on, .ast-article-post .ast-date-meta .posted-on * {
+        background: var(--ast-global-color-1);
+        color: #fff
+    }
+
+    .ast-article-post .ast-date-meta .posted-on .date-month, .ast-article-post .ast-date-meta .posted-on .date-year {
+        color: #fff
+    }
+
+    .ast-load-more:hover {
+        color: #fff;
+        border-color: var(--ast-global-color-1);
+        background-color: var(--ast-global-color-1)
+    }
+
+    .ast-loader > div {
+        background-color: var(--ast-global-color-1)
+    }
+
+    .ast-search-box.header-cover #close::before, .ast-search-box.full-screen #close::before {
+        font-family: Astra;
+        content: "\e5cd";
+        display: inline-block;
+        transition: transform .3s ease-in-out
+    }</style>
+    <style data-wpacu-inline-css-file="1">
+        .lazyloaded:not(.elementor-motion-effects-element-type-background), .lazyloaded > .elementor-motion-effects-container > .elementor-motion-effects-layer, .lazyloaded > [class*=-wrap] > .elementor-motion-effects-container > .elementor-motion-effects-layer, body.e-lazyload .e-con.lazyloaded:before, body.e-lazyload .lazyloaded, body.e-lazyload .lazyloaded .elementor-background-overlay {
+            --e-bg-lazyload-loaded: var(--e-bg-lazyload)
+        }
+    </style>
+    <link rel="stylesheet" id="elementor-icons-css" href="http://www.stockswinner.com/awsd/elementor-icons.min.css" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/elementor-icons.min.css" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" href="awsd/frontend-lite.min-3.15.2.css" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/frontend-lite.min-3.15.2.css" media="all">
+
+    <style data-wpacu-inline-css-file="1">
+        .elementor-kit-258 {
+            --e-global-color-primary: #6EC1E4;
+            --e-global-color-secondary: #54595F;
+            --e-global-color-text: #7A7A7A;
+            --e-global-color-accent: #61CE70;
+            --e-global-color-60d0f255: #4054B2;
+            --e-global-color-374b3c7d: #23A455;
+            --e-global-color-5773862e: #000;
+            --e-global-color-17bd6fed: #FFF;
+            --e-global-typography-primary-font-family: "Roboto";
+            --e-global-typography-primary-font-weight: 600;
+            --e-global-typography-secondary-font-family: "Roboto Slab";
+            --e-global-typography-secondary-font-weight: 400;
+            --e-global-typography-text-font-family: "Roboto";
+            --e-global-typography-text-font-weight: 400;
+            --e-global-typography-accent-font-family: "Roboto";
+            --e-global-typography-accent-font-weight: 500;
+        }
+
+        .elementor-section.elementor-section-boxed > .elementor-container {
+            max-width: 1140px;
+        }
+
+        .e-con {
+            --container-max-width: 1140px;
+        }
+
+        .elementor-widget:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .elementor-element {
+            --widgets-spacing: 20px;
+        }
+
+        {
+        }
+        h1.entry-title {
+            display: var(--page-title-display);
+        }
+
+        .elementor-kit-258 e-page-transition {
+            background-color: #FFBC7D;
+        }
+
+        @media (max-width: 1024px) {
+            .elementor-section.elementor-section-boxed > .elementor-container {
+                max-width: 1024px;
+            }
+
+            .e-con {
+                --container-max-width: 1024px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .elementor-section.elementor-section-boxed > .elementor-container {
+                max-width: 767px;
+            }
+
+            .e-con {
+                --container-max-width: 767px;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" id="elementor-post-1376-css" href="awsd/post-1376.css">
+
+
+    <link rel="stylesheet" id="elementor-icons-shared-0-css" href="awsd/fontawesome.min.css" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/fontawesome.min.css" media="all">
+    <style data-wpacu-inline-css-file="1">
+        /*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+        @font-face {
+            font-family: "Font Awesome 5 Free";
+            font-style: normal;
+            font-weight: 900;
+            font-display: block;
+        }
+
+        .fa, .fas {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900
+        }
+    </style>
+    <style data-wpacu-inline-css-file="1">
+        /*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+        @font-face {
+            font-family: "Font Awesome 5 Brands";
+            font-style: normal;
+            font-weight: 400;
+            font-display: block;
+        }
+
+        .fab {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic10152305z.com/" crossorigin="">
+    <style>.recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important
+    }</style>
+    <style id="wp-custom-css">.wprs_rd_more {
+        color: #6ED25A !important
+    }
+
+    .wprs_rd_less {
+        color: #6ED25A !important
+    }
+
+    html {
+        max-width: 100vw !important;
+        overflow-x: hidden !important
+    }</style>
+    <style media="all" id="fa-v5-font-face">
+        @font-face {
+            font-family: "Font Awesome 5 Brands";
+            font-display: block;
+            font-weight: 400;
+            src: url("awsd/free-fa-brands-400.woff2") /*tpa=https://ka-f.fontawesome.com/releases/v6.4.2/webfonts/free-fa-brands-400.woff2*/ format("woff2"), url("awsd/free-fa-brands-400.ttf") /*tpa=https://ka-f.fontawesome.com/releases/v6.4.2/webfonts/free-fa-brands-400.ttf*/ format("truetype")
+        }
+
+        @font-face {
+            font-family: "Font Awesome 5 Free";
+            font-display: block;
+            font-weight: 900;
+            src: url("awsd/free-fa-solid-900.woff2") /*tpa=https://ka-f.fontawesome.com/releases/v6.4.2/webfonts/free-fa-solid-900.woff2*/ format("woff2"), url("awsd/free-fa-solid-900.ttf") /*tpa=https://ka-f.fontawesome.com/releases/v6.4.2/webfonts/free-fa-solid-900.ttf*/ format("truetype")
+        }
+
+        @font-face {
+            font-family: "Font Awesome 5 Free";
+            font-display: block;
+            font-weight: 400;
+            src: url("awsd/free-fa-regular-400.woff2") /*tpa=https://ka-f.fontawesome.com/releases/v6.4.2/webfonts/free-fa-regular-400.woff2*/ format("woff2"), url("awsd/free-fa-regular-400.ttf") /*tpa=https://ka-f.fontawesome.com/releases/v6.4.2/webfonts/free-fa-regular-400.ttf*/ format("truetype")
+        }</style>
+    <style type="text/css">#_copy {
+        align-items: center;
+        background: #4494d5;
+        border-radius: 3px;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        font-size: 13px;
+        height: 30px;
+        justify-content: center;
+        position: absolute;
+        width: 60px;
+        z-index: 1000
+    }
+
+    #select-tooltip, #sfModal, .modal-backdrop, div[id^=reader-helper] {
+        display: none !important
+    }
+
+    .modal-open {
+        overflow: auto !important
+    }
+
+    ._sf_adjust_body {
+        padding-right: 0 !important
+    }
+
+    .super_copy_btns_div {
+        position: fixed;
+        width: 154px;
+        left: 10px;
+        top: 45%;
+        background: #e7f1ff;
+        border: 2px solid #4595d5;
+        font-weight: 600;
+        border-radius: 2px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+        z-index: 5000
+    }
+
+    .super_copy_btns_logo {
+        width: 100%;
+        background: #4595d5;
+        text-align: center;
+        font-size: 12px;
+        color: #e7f1ff;
+        line-height: 30px;
+        height: 30px
+    }
+
+    .super_copy_btns_btn {
+        display: block;
+        width: 128px;
+        height: 28px;
+        background: #7f5711;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 12px;
+        border: 0;
+        outline: 0;
+        margin: 8px auto;
+        font-weight: 700;
+        cursor: pointer;
+        opacity: .9
+    }
+
+    .super_copy_btns_btn:hover {
+        opacity: .8
+    }
+
+    .super_copy_btns_btn:active {
+        opacity: 1
+    }</style>
+    <style type="text/css">.resize-observer[data-v-8859cc6c] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        pointer-events: none;
+        display: block;
+        overflow: hidden;
+        opacity: 0
+    }
+
+    .resize-observer[data-v-8859cc6c] object {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: -1
+    }</style>
+    <style type="text/css">x-vue-echarts {
+        display: block;
+        width: 100%;
+        height: 100%
+    }</style>
+</head>
+<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="home page-template-default page page-id-1376 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-4.2.2 ast-single-post ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header e-lazyload elementor-default elementor-kit-258 elementor-page elementor-page-1376 astra-addon-4.1.7 e--ua-blink e--ua-chrome e--ua-webkit" ap-style="" inmaintabuse="1" data-new-gr-c-s-check-loaded="14.1138.0" data-gr-ext-installed="" data-elementor-device-mode="desktop" style="">
+<noscript><img height="1" width="1" style="display:none" src="http://www.stockswinner.com/-id=377539111266024&ev=PageView&noscript=1" tppabs="https://awsd.shop/Uploads/7705d251/static/picture/tr?id=377539111266024&ev=PageView&noscript=1">
+</noscript>
+<script type="text/javascript">
+
+</script>
+<noscript>
+</noscript>
+<a class="skip-link screen-reader-text" role="link" title="Skip to content">
+    Skip to content</a>
+<div class="hfeed site" id="page">
+    <div data-elementor-type="header" data-elementor-id="404" class="elementor elementor-404 elementor-location-header" data-elementor-post-type="elementor_library">
+    </div>
+    <div id="content" class="site-content">
+        <div class="ast-container">
+            <div class="astra-advanced-hook-2029 ">
+            </div>
+            <div id="primary" class="content-area primary">
+                <main id="main" class="site-main">
+                    <article class="post-1376 page type-page status-publish ast-article-single remove-featured-img-padding" id="post-1376" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+                        <header class="entry-header ast-no-thumbnail ast-no-title ast-header-without-markup">
+                        </header>
+                        <div class="entry-content clear" itemprop="text">
+                            <div data-elementor-type="wp-page" data-elementor-id="1376" class="elementor elementor-1376" data-elementor-post-type="page">
+                                <div style="background-image: url(awsd/header_bg.webp);background-size: 100% 100%;height: 220px;width: 100%">
+
+                                </div>
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-dbd5bcf elementor-section-full_width elementor-section-stretched elementor-hidden-desktop elementor-section-height-default elementor-section-height-default" data-id="dbd5bcf" data-element_type="section" style="width: 100%; left: 0px;">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1cc5fc4" data-id="1cc5fc4" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-170189a elementor-hidden-desktop elementor-widget elementor-widget-heading" data-id="170189a" data-element_type="widget" data-widget_type="heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <h1 class="elementor-heading-title elementor-size-default">
+                                                            Professional <span style="color: #6ED25A; ">investor </span>
+                                                            exchange <br> community</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-28da58f" data-id="28da58f" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-ee43b08 elementor-align-right elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-tablet-align-center elementor-widget-tablet__width-inherit uael-mbutton-text-center elementor-widget elementor-widget-uael-marketing-button" data-id="ee43b08" data-element_type="widget" data-widget_type="uael-marketing-button.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="uael-marketing-button">
+                                                            <div class="uael-button-wrapper elementor-button-wrapper">
+                                                                <a class="elementor-button-link elementor-button elementor-size-sm uael-marketing-buttons- elementor-animation-pop" onclick="golink();">
+                                                                    <span class="uael_btn__blink"></span>
+                                                                    <span class="uael-marketing-buttons-wrap">
+<span class="elementor-button-content-wrapper uael-buttons-icon-">
+<span class="elementor-button-text uael-marketing-button-title elementor-inline-editing" data-elementor-setting-key="text" data-elementor-inline-editing-toolbar="none">Join us now →</span>
+</span>
+</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-a7ffe87 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a7ffe87" data-element_type="section" style="width: 100%; left: 0px;">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9438d83" data-id="9438d83" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated e-swiper-container">
+                                                <div class="elementor-element elementor-element-14bbb00 elementor-widget-mobile__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image-carousel e-widget-swiper" data-id="14bbb00" data-element_type="widget" data-widget_type="image-carousel.default" aria-roledescription="carousel" aria-label="Carousel | Horizontal scrolling: Arrow Left &amp; Right">
+                                                    <div style="width: 100%;display: grid;grid-template-columns: 1fr 1fr 1fr 1fr">
+                                                        <div style="text-align: center">
+                                                            <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="awsd/NASDAQ-Logo-300x85.webp" style="width:53px;height: 15px" alt="NASDAQ Logo Stock Exchange"></figure>
+                                                        </div>
+                                                        <div style="text-align: center">
+                                                            <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" style="width:53px;height: 15px" src="awsd/bloomberg-logo-300x84.webp" alt="Bloomberg Logo"></figure>
+                                                        </div>
+                                                        <div style="text-align: center">
+                                                            <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" style="width:53px;height: 15px" src="awsd/Forbes-Logo-300x87.webp" alt="Forbes Logo"></figure>
+                                                        </div>
+                                                        <div style="text-align: center">
+                                                            <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" style="width:53px;height: 15px" src="awsd/NYSE-logo-300x110.webp" alt="NYSE Logo"></figure>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-15ce69f elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="15ce69f" data-element_type="section">
+                                                    <div class="elementor-container elementor-column-gap-no">
+                                                        <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-59dee71" data-id="59dee71" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-6e0d544 elementor-widget elementor-widget-image" data-id="6e0d544" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <img decoding="async" width="1024" height="375" src="awsd/NYSE-logo-1024x375.webp" class="attachment-large size-large wp-image-475" alt="NYSE Logo" sizes="(max-width: 1024px) 100vw, 1024px">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-63b0faa" data-id="63b0faa" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-b7fa937 elementor-widget elementor-widget-image" data-id="b7fa937" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <img decoding="async" width="1024" height="291" src="awsd/NASDAQ-Logo-1024x291.webp" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/NASDAQ-Logo-1024x291.webp" class="attachment-large size-large wp-image-474" alt="NASDAQ Logo Stock Exchange" sizes="(max-width: 1024px) 100vw, 1024px">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-30660dc" data-id="30660dc" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-9131762 elementor-widget elementor-widget-image" data-id="9131762" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <img decoding="async" loading="lazy" width="1024" height="349" src="awsd/CBOE-Logo-1024x349.webp" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/CBOE-Logo-1024x349.webp" class="attachment-large size-large wp-image-471" alt="Logo CBOE Exchange" sizes="(max-width: 1024px) 100vw, 1024px">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-8a317a5" data-id="8a317a5" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-467fa2b elementor-widget elementor-widget-image" data-id="467fa2b" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <img decoding="async" loading="lazy" width="424" height="119" src="awsd/bloomberg-logo.webp" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/bloomberg-logo.webp" class="attachment-large size-large wp-image-470" alt="Bloomberg Logo" sizes="(max-width: 424px) 100vw, 424px">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-fb0dce6" data-id="fb0dce6" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-edfccca elementor-widget elementor-widget-image" data-id="edfccca" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <img decoding="async" loading="lazy" width="900" height="260" src="awsd/Forbes-Logo.webp" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/Forbes-Logo.webp" class="attachment-large size-large wp-image-472" alt="Forbes Logo" sizes="(max-width: 900px) 100vw, 900px">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-5d0888c7 elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="5d0888c7" data-element_type="section" style="width: 100%; left: 0px;">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4beb87e7 elementor-hidden-mobile" data-id="4beb87e7" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-5299b76c elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="5299b76c" data-element_type="section" id="vidcontrol-holder">
+                                                    <div class="elementor-container elementor-column-gap-default">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7336df14" data-id="7336df14" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-7671cca8 elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-id="7671cca8" data-element_type="section">
+                                                                    <div class="elementor-container elementor-column-gap-default">
+                                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4e79417a" data-id="4e79417a" data-element_type="column">
+                                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                                <div class="elementor-element elementor-element-6003b463 elementor-widget elementor-widget-heading" data-id="6003b463" data-element_type="widget" data-widget_type="heading.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <h2 class="elementor-heading-title elementor-size-default">
+                                                                                            System Demo</h2>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="elementor-element elementor-element-7ee1e26a elementor-widget elementor-widget-text-editor" data-id="7ee1e26a" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <style>/*! elementor - v3.15.0 - 09-08-2023 */
+                                                                                        .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+                                                                                            background-color: #69727d;
+                                                                                            color: #fff
+                                                                                        }
+
+                                                                                        .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+                                                                                            color: #69727d;
+                                                                                            border: 3px solid;
+                                                                                            background-color: transparent
+                                                                                        }
+
+                                                                                        .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+                                                                                            margin-top: 8px
+                                                                                        }
+
+                                                                                        .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+                                                                                            width: 1em;
+                                                                                            height: 1em
+                                                                                        }
+
+                                                                                        .elementor-widget-text-editor .elementor-drop-cap {
+                                                                                            float: left;
+                                                                                            text-align: center;
+                                                                                            line-height: 1;
+                                                                                            font-size: 50px
+                                                                                        }
+
+                                                                                        .elementor-widget-text-editor .elementor-drop-cap-letter {
+                                                                                            display: inline-block
+                                                                                        }</style>
+                                                                                        <p>Watch our automated scanners
+                                                                                            find explosive opportunities
+                                                                                            in the market!</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-33fe2f5c" data-id="33fe2f5c" data-element_type="column">
+                                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                                <div class="elementor-element elementor-element-71c3158 elementor-widget elementor-widget-image" data-id="71c3158" data-element_type="widget" id="vidSwitch0" data-widget_type="image.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <img src="awsd/intro_video-q3m46xtm36yzwlketfnd7224u2an1iy3a8gwcjz6ds.webp">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-69b2ba38" data-id="69b2ba38" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-4f73735f elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-id="4f73735f" data-element_type="section">
+                                                                    <div class="elementor-container elementor-column-gap-default">
+                                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6cbdfba0" data-id="6cbdfba0" data-element_type="column">
+                                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                                <div class="elementor-element elementor-element-1f86fcf3 elementor-widget elementor-widget-heading" data-id="1f86fcf3" data-element_type="widget" data-widget_type="heading.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <h2 class="elementor-heading-title elementor-size-default">
+                                                                                            Stocks Flow Scanner</h2>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="elementor-element elementor-element-e1f40e elementor-widget elementor-widget-text-editor" data-id="e1f40e" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <p>See how our stocks flow
+                                                                                            scanner allows you to follow
+                                                                                            the “smart money”!</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3c64c20b" data-id="3c64c20b" data-element_type="column">
+                                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                                <div class="elementor-element elementor-element-81ce4ca elementor-widget elementor-widget-image" data-id="81ce4ca" data-element_type="widget" id="vidSwitch1" data-widget_type="image.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <img src="awsd/options_video-q3m47p2xle0b9agte9fjpd6i28ka8qyb1zdz9kurdc.webp">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-0faf50c elementor-section-stretched elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0faf50c" data-element_type="section" style="width: 100%; left: 0px;">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e6f4a27" data-id="e6f4a27" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-4154945f uael-ct-stack--none elementor-widget elementor-widget-uael-content-toggle" data-id="4154945f" data-element_type="widget" data-widget_type="uael-content-toggle.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="uael-ct-desktop-stack--no uael-rbs-wrapper">
+                                                            <div class="uael-rbs-toggle">
+                                                                <a class="uael-rbs-head-1" onclick="golink();" data-elementor-inline-editing-toolbar="basic">
+                                                                    <div class="uael-sec-1" style="background-color: #61ce70;font-weight: 600;">
+
+                                                                        Get alerts →
+                                                                    </div>
+                                                                </a>
+                                                                <div class="uael-main-btn" data-switch-type="round_1">
+                                                                    <label class="uael-rbs-switch-label"><input class="uael-rbs-switch uael-switch-round-1 elementor-clickable" type="checkbox"><span class="uael-rbs-slider uael-rbs-round elementor-clickable"></span></label>
+                                                                </div>
+                                                                <!--&lt;div class=&#34;uael-sec-2&#34;&gt;-->
+                                                                <!--&lt;h5 class=&#34;uael-rbs-head-2&#34; data-elementor-inline-editing-toolbar=&#34;basic&#34;&gt;Options Flow&lt;/h5&gt;-->
+                                                                <!--&lt;/div&gt;-->
+                                                            </div>
+                                                            <div class="uael-rbs-toggle-sections">
+                                                                <div class="uael-rbs-section-1">
+                                                                    <div data-elementor-type="section" data-elementor-id="1686" class="elementor elementor-1686" data-elementor-post-type="elementor_library">
+                                                                        <section class="elementor-section elementor-top-section elementor-element elementor-element-2c7aa384 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="2c7aa384" data-element_type="section" id="about" style="width: 100%; left: 0px;">
+                                                                            <div class="elementor-background-overlay"></div>
+                                                                            <div class="elementor-container elementor-column-gap-no">
+                                                                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-21389645" data-id="21389645" data-element_type="column">
+                                                                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <img src="awsd/intro_video-q3m46xtm36yzwlketfnd7224u2an1iy3a8gwcjz6ds.webp">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="display: none;" class="uael-rbs-section-2">
+                                                                    <div data-elementor-type="section" data-elementor-id="1687" class="elementor elementor-1687" data-elementor-post-type="elementor_library">
+                                                                        <section class="elementor-section elementor-top-section elementor-element elementor-element-7efee42d elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="7efee42d" data-element_type="section" id="about" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 100%; left: 0px;">
+                                                                            <div class="elementor-background-overlay"></div>
+                                                                            <div class="elementor-container elementor-column-gap-no">
+                                                                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-240296fa" data-id="240296fa" data-element_type="column">
+                                                                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                                                                        <div class="elementor-element elementor-element-95f0f81 elementor-widget elementor-widget-image" data-id="95f0f81" data-element_type="widget" id="vidSwitch1-mobile" data-widget_type="image.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <img src="awsd/options_video-q3m47p2xle0b9agte9fjpd6i28ka8qyb1zdz9kurdc.webp">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-c2b2a83 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="c2b2a83" data-element_type="section" id="about" style="width: 100%; left: 0px;">
+                                    <div class="elementor-background-overlay"></div>
+                                    <div class="elementor-container elementor-column-gap-no">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7e86dd0" data-id="7e86dd0" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-a1551ff elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="a1551ff" data-element_type="section">
+                                                    <div class="elementor-container elementor-column-gap-default">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7c25cb6" data-id="7c25cb6" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-background-overlay"></div>
+                                                                <div class="elementor-element elementor-element-10f90f9 elementor-widget elementor-widget-ucaddon_uc_icon_accordion" data-id="10f90f9" data-element_type="widget" data-widget_type="ucaddon_uc_icon_accordion.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <style type="text/css">#uc_uc_icon_accordion_elementor_10f90f9 * {
+                                                                            box-sizing: border-box
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .uc_container .uc-heading {
+                                                                            cursor: pointer;
+                                                                            display: flex;
+                                                                            align-items: center;
+                                                                            transition: 0.3s
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .uc_container .uc-heading span.bbb {
+                                                                            display: block
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .uc_ac_box.uc-item-active span.uc_dactive {
+                                                                            display: none
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .uc_ac_box:not(.uc-item-active) span.uc_active {
+                                                                            display: none
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .ue_icon_holder, #uc_uc_icon_accordion_elementor_10f90f9 .ue_icon_spacing {
+                                                                            flex-grow: 0;
+                                                                            flex-shrink: 0
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .uc_content {
+                                                                            display: none
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .ue_icon {
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            align-items: center;
+                                                                            line-height: 1em;
+                                                                            transition: 0.3s
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .ue_icon svg {
+                                                                            height: 1em;
+                                                                            width: 1em
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .ue_expand_inside {
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            align-items: center;
+                                                                            line-height: 1em
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .ue_expand_inside svg {
+                                                                            height: 1em;
+                                                                            width: 1em
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .ue_expand, #uc_uc_icon_accordion_elementor_10f90f9 .ue_expand_spacing {
+                                                                            flex-grow: 0;
+                                                                            flex-shrink: 0
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .ue_title {
+                                                                            flex-grow: 1
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .uc_ac_box:last-child {
+                                                                            margin-bottom: 0
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9 .uc_ac_box {
+                                                                            overflow: hidden
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9_item1 .ue_icon {
+                                                                            background-color:
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_10f90f9_item1 .ue-heading {
+                                                                            background-color:
+                                                                        }</style>
+                                                                        <div class="uc_material_accordion " id="uc_uc_icon_accordion_elementor_10f90f9" data-name="" data-closeothers="true">
+                                                                            <div class="uc_container">
+                                                                                <div class="uc_ac_box ">
+                                                                                    <div class="uc-heading uc_trigger">
+                                                                                        <div class="ue_icon_holder">
+                                                                                            <div class="ue_icon">
+                                                                                                <i class="fab fa-react" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="ue_icon_spacing"></div>
+                                                                                        <div class="ue_title">WE FIND
+                                                                                            THE ACTION
+                                                                                        </div>
+                                                                                        <div class="ue_expand_spacing"></div>
+                                                                                        <div class="ue_expand">
+                                                                                            <div class="ue_expand_inside">
+                                                                                                <span class="uc_dactive bbb ue_accordion_icon"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                                                                                                <span class="uc_active bbb ue_accordion_icon"><i class="fas fa-chevron-up" aria-hidden="true"></i></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="uc_content">
+                                                                                        <p>We are distinctly different
+                                                                                            than any other trading
+                                                                                            system on the market. Long
+                                                                                            before the market opens, our
+                                                                                            system scans the exchanges
+                                                                                            using proprietary algorithms
+                                                                                            to find the most active
+                                                                                            stocks. Our fully automated
+                                                                                            scanners then send you
+                                                                                            alerts to explosive
+                                                                                            opportunities in the market
+                                                                                            in real time. Once an alert
+                                                                                            is posted, you can click on
+                                                                                            the symbol and find out why
+                                                                                            that stock received an
+                                                                                            alert. Then use our advanced
+                                                                                            charting tools and
+                                                                                            proprietary volatility
+                                                                                            indicator to see which
+                                                                                            stocks are breaking out and
+                                                                                            posting the
+                                                                                            biggest&nbsp;gains.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-281b212 elementor-widget elementor-widget-ucaddon_uc_icon_accordion" data-id="281b212" data-element_type="widget" data-widget_type="ucaddon_uc_icon_accordion.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <style type="text/css">#uc_uc_icon_accordion_elementor_281b212 * {
+                                                                            box-sizing: border-box
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .uc_container .uc-heading {
+                                                                            cursor: pointer;
+                                                                            display: flex;
+                                                                            align-items: center;
+                                                                            transition: 0.3s
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .uc_container .uc-heading span.bbb {
+                                                                            display: block
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .uc_ac_box.uc-item-active span.uc_dactive {
+                                                                            display: none
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .uc_ac_box:not(.uc-item-active) span.uc_active {
+                                                                            display: none
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .ue_icon_holder, #uc_uc_icon_accordion_elementor_281b212 .ue_icon_spacing {
+                                                                            flex-grow: 0;
+                                                                            flex-shrink: 0
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .uc_content {
+                                                                            display: none
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .ue_icon {
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            align-items: center;
+                                                                            line-height: 1em;
+                                                                            transition: 0.3s
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .ue_icon svg {
+                                                                            height: 1em;
+                                                                            width: 1em
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .ue_expand_inside {
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            align-items: center;
+                                                                            line-height: 1em
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .ue_expand_inside svg {
+                                                                            height: 1em;
+                                                                            width: 1em
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .ue_expand, #uc_uc_icon_accordion_elementor_281b212 .ue_expand_spacing {
+                                                                            flex-grow: 0;
+                                                                            flex-shrink: 0
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .ue_title {
+                                                                            flex-grow: 1
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .uc_ac_box:last-child {
+                                                                            margin-bottom: 0
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212 .uc_ac_box {
+                                                                            overflow: hidden
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212_item1 .ue_icon {
+                                                                            background-color:
+                                                                        }
+
+                                                                        #uc_uc_icon_accordion_elementor_281b212_item1 .ue-heading {
+                                                                            background-color:
+                                                                        }</style>
+                                                                        <div class="uc_material_accordion " id="uc_uc_icon_accordion_elementor_281b212" data-name="" data-closeothers="true">
+                                                                            <div class="uc_container">
+                                                                                <div class="uc_ac_box ">
+                                                                                    <div class="uc-heading uc_trigger">
+                                                                                        <div class="ue_icon_holder">
+                                                                                            <div class="ue_icon">
+                                                                                                <i class="fas fa-exclamation" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="ue_icon_spacing"></div>
+                                                                                        <div class="ue_title">A POWERFUL
+                                                                                            ADVANTAGE
+                                                                                        </div>
+                                                                                        <div class="ue_expand_spacing"></div>
+                                                                                        <div class="ue_expand">
+                                                                                            <div class="ue_expand_inside">
+                                                                                                <span class="uc_dactive bbb ue_accordion_icon"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                                                                                                <span class="uc_active bbb ue_accordion_icon"><i class="fas fa-chevron-up" aria-hidden="true"></i></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="uc_content">
+                                                                                        <p>Our system continuously scans
+                                                                                            the NASDAQ, New York Stock
+                                                                                            Exchange and all other stock
+                                                                                            markets analyzing over 8,000
+                                                                                            stocks. Our algorithms are
+                                                                                            similar to those used in
+                                                                                            extremely profitable ‘high
+                                                                                            frequency trading’ (HFT)
+                                                                                            strategies. We are here to
+                                                                                            level the playing field
+                                                                                            offering you technology that
+                                                                                            has too often been reserved
+                                                                                            for large financial firms,
+                                                                                            hedge funds, and the Wall
+                                                                                            Street&nbsp;elite.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-854df7c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="854df7c" data-element_type="section" style="width: 100%; left: 0px;">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3567d5f" data-id="3567d5f" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-228315d elementor-widget elementor-widget-heading" data-id="228315d" data-element_type="widget" data-widget_type="heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <h2 class="elementor-heading-title elementor-size-default">Our
+                                                            Proprietary <span style="color: #6ED25A">Features</span>
+                                                        </h2>
+                                                    </div>
+                                                </div>
+                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-edc8e82 elementor-section-full_width elementor-reverse-mobile elementor-section-height-default elementor-section-height-default" data-id="edc8e82" data-element_type="section">
+                                                    <div class="elementor-container elementor-column-gap-default">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-361ffea" data-id="361ffea" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-24d817f elementor-widget elementor-widget-text-editor" data-id="24d817f" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h3 style="color: #6ed25a;"><strong>Powerful
+                                                                            Alerts</strong></h3>
+                                                                        <p>Our fully automated algorithm-based system
+                                                                            scans over 11,000 stocks multiple times per
+                                                                            second to find the most volatile stocks and
+                                                                            alert you to the biggest moves in the market
+                                                                            before they occur.</p>
+                                                                        <p><a style="color: #6ed25a;">Harness
+                                                                            Algo-Driven
+                                                                            Market Alerts</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-beaab15" data-id="beaab15" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-facf281 elementor-widget elementor-widget-image elementor-motion-effects-parent" data-id="facf281" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container elementor-motion-effects-element" style=" --e-transform-transition-duration: 100ms; transform: translateX(var(--translateX));">
+                                                                        <img decoding="async" loading="lazy" width="1024" height="1024" src="awsd/alerts_reflect_3-1024x1024.webp" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/alerts_reflect_3-1024x1024.webp" class="attachment-large size-large wp-image-1810" alt="Alert Log Algo BlackBoxStocks Platform" sizes="(max-width: 1024px) 100vw, 1024px">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-9c408ec elementor-section-full_width elementor-reverse-mobile elementor-section-height-default elementor-section-height-default" data-id="9c408ec" data-element_type="section">
+                                                    <div class="elementor-container elementor-column-gap-default">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-fd8ec71" data-id="fd8ec71" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-fd5c6f0 elementor-widget elementor-widget-text-editor" data-id="fd5c6f0" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h3 style="color: #6ed25a;"><strong>Trading
+                                                                            Community</strong></h3>
+                                                                        <p>
+                                                                            No one trades alone. Chat directly with
+                                                                            experienced and novice traders in our
+                                                                            professional investor community. No need to
+                                                                            waste precious time switching between
+                                                                            platforms and tabs. </p>
+                                                                        <ul style="font-size: 1em;">
+                                                                            <li>Get three high-yield stocks
+                                                                            </li>
+                                                                            <li>Collaborate and Share Ideas</li>
+                                                                            <li>Interact with Seasoned Veterans in a
+                                                                                Team Environment
+                                                                            </li>
+                                                                        </ul>
+                                                                        <p><a style="color: #6ed25a;">Delve Deeper into
+                                                                            Our
+                                                                            Chat Capabilities
+                                                                        </a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-062fe50" data-id="062fe50" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-3d777ac elementor-widget elementor-widget-image elementor-motion-effects-parent" data-id="3d777ac" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container elementor-motion-effects-element" style=" transform: translateX(var(--translateX)); --e-transform-transition-duration: 100ms;">
+                                                                        <img decoding="async" loading="lazy" width="725" height="1024" src="awsd/chat_reflect-725x1024-1.webp" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/chat_reflect-725x1024-1.webp" class="attachment-large size-large wp-image-1603" alt="Members Chat on BlackBox Platform" sizes="(max-width: 725px) 100vw, 725px">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-e0a6681 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="e0a6681" data-element_type="section">
+                                                    <div class="elementor-container elementor-column-gap-default">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d580819" data-id="d580819" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-d888fd5 elementor-widget elementor-widget-image elementor-motion-effects-parent" data-id="d888fd5" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container elementor-motion-effects-element" style=" --e-transform-transition-duration: 100ms; transform: translateX(var(--translateX));">
+                                                                        <img decoding="async" loading="lazy" width="1024" height="1024" src="awsd/darkpool_reflect_down-1024x1024-1-1024x1024.webp" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/darkpool_reflect_down-1024x1024-1-1024x1024.webp" class="attachment-large size-large wp-image-1604" alt="Our DarkPool Features" sizes="(max-width: 1024px) 100vw, 1024px">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-470a3cd" data-id="470a3cd" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-8108a67 elementor-widget elementor-widget-text-editor" data-id="8108a67" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h3 style="color: #6ed25a;"><strong>Dark
+                                                                            Pool</strong></h3>
+                                                                        <p>Dark Pools are private exchanges where
+                                                                            financial institutions conduct large block
+                                                                            trades outside of the public markets. Our
+                                                                            Dark Pool scanner provides our members with
+                                                                            real-time insight into what is happening in
+                                                                            these mysterious private
+                                                                            exchanges.&nbsp;</p>
+                                                                        <p><a style="color: #6ed25a;">Uncover Dark Pool
+                                                                            Insights</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-173fcd3 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="173fcd3" data-element_type="section" style="width: 100%; left: 0px;">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-959002d" data-id="959002d" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-e44041a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e44041a" data-element_type="section">
+                                                    <div class="elementor-container elementor-column-gap-default">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dc5d91c" data-id="dc5d91c" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-8181b0b elementor-widget__width-auto elementor-align-center uael-mbutton-text-center elementor-widget elementor-widget-uael-marketing-button" data-id="8181b0b" data-element_type="widget" data-widget_type="uael-marketing-button.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="uael-marketing-button">
+                                                                            <div class="uael-button-wrapper elementor-button-wrapper">
+                                                                                <a class="elementor-button-link elementor-button elementor-size-xl uael-marketing-buttons-right elementor-animation-grow" onclick="golink();">
+<span class="uael-marketing-buttons-wrap">
+<span class="elementor-button-content-wrapper uael-buttons-icon-right">
+<span class="elementor-align-icon-right elementor-button-icon">
+<i aria-hidden="true" class="fa fa-arrow-right"></i>
+</span>
+<span class="elementor-button-text uael-marketing-button-title elementor-inline-editing" data-elementor-setting-key="text" data-elementor-inline-editing-toolbar="none">Join us now</span>
+</span>
+</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-55265e7 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="55265e7" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 100%; left: 0px;margin-bottom: 40px">
+                                    <div class="elementor-backghttps://cvoweigh.autos/static10152305zround-overlay"></div>
+                                    <div class="elementor-container elementor-column-gap-no">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c679aed" data-id="c679aed" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-92371ab elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="92371ab" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                    <div class="elementor-container elementor-column-gap-default">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-10c52e6" data-id="10c52e6" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-07bd445 elementor-widget elementor-widget-heading" data-id="07bd445" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h5 class="elementor-heading-title elementor-size-default" style="font-size: 20px;color: #6ED25A">
+                                                                            Here are some of the results of our
+                                                                            community tests, join us and you'll get
+                                                                            something different
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="elementor-element elementor-element-3cd10e1 elementor-widget elementor-widget-heading" data-id="3cd10e1" data-element_type="widget" data-widget_type="heading.default">
+                                                </div>
+                                                <div class="elementor-element elementor-element-fec6fb5 elementor-widget elementor-widget-image-carousel" data-id="fec6fb5" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;7&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:200,&quot;speed&quot;:1000,&quot;slides_to_show_tablet&quot;:&quot;4&quot;,&quot;slides_to_show_mobile&quot;:&quot;3&quot;,&quot;slides_to_scroll_tablet&quot;:&quot;1&quot;,&quot;lazyload&quot;:&quot;yes&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;}" data-widget_type="image-carousel.default">
+                                                    <div class="elementor-widget-container" style="text-align: center;">
+                                                        <img src="awsd/shouyi22.png" tppabs="https://awsd.shop/u1tra/Professional investor exchange community_files/shouyi22.png" alt="" style="max-width: 100%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <div>
+                                    <div class="elementor-element elementor-element-81d26dc elementor-widget elementor-widget-heading" data-id="81d26dc" data-element_type="widget" data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default"><span style="color: #6ED25A">NO MORE ‘HOPING-AND-PRAYING’</span></h2>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-81d26dc elementor-widget elementor-widget-heading" data-id="81d26dc" data-element_type="widget" data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h3 class="elementor-heading-title elementor-size-default"><span style="color: #6ED25A">Join Our Stock Community Today</span></h3>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-fcf5fb0 elementor-widget elementor-widget-text-editor" data-id="fcf5fb0" data-element_type="widget" data-widget_type="text-editor.default">
+                                        <div class="elementor-widget-container" style="text-align: center;font-size: 14px;padding: 0 20px">
+                                            <p>
+                                                Why choose us to recommend "hot" high-yielding top stocks for you?<br>We
+                                                have a decade of experience in Technical Analysis &amp; in-depth
+                                                research of stocks.<br>Sending you real time stock alerts!<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-959002d" data-id="959002d" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-e44041a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e44041a" data-element_type="section">
+                                                    <div class="elementor-container elementor-column-gap-default">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dc5d91c" data-id="dc5d91c" data-element_type="column">
+                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                <div class="elementor-element elementor-element-8181b0b elementor-widget__width-auto elementor-align-center uael-mbutton-text-center elementor-widget elementor-widget-uael-marketing-button" data-id="8181b0b" data-element_type="widget">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="uael-marketing-button">
+                                                                            <div class="uael-button-wrapper elementor-button-wrapper">
+                                                                                <a class="elementor-button-link elementor-button elementor-size-xl uael-marketing-buttons-right elementor-animation-grow" onclick="golink();">
+<span class="uael-marketing-buttons-wrap">
+<span class="elementor-button-content-wrapper uael-buttons-icon-right">
+<span class="elementor-align-icon-right elementor-button-icon">
+<i aria-hidden="true" class="fa fa-arrow-right"></i>
+</span>
+<span class="elementor-button-text uael-marketing-button-title elementor-inline-editing" data-elementor-setting-key="text" data-elementor-inline-editing-toolbar="none">Join us now</span>
+</span>
+</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding:30px 0;text-align:center">
+                                    <p>Terms & Conditions | Privacy | Support / Contact Us</p>
+                                    <p>© MooProfit Ltd. @ 2024 All rights reserved</p>
+                                </div>
+                                <!--                                <section-->
+                                <!--                                        class="elementor-section elementor-top-section elementor-element elementor-element-bed31cc elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"-->
+                                <!--                                        data-id="bed31cc" data-element_type="section"-->
+                                <!--                                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;shape_divider_top&quot;:&quot;opacity-fan&quot;,&quot;shape_divider_bottom&quot;:&quot;opacity-fan&quot;}"-->
+                                <!--                                        style="width: 100%; left: 0px;">-->
+                                <!--                                    <div class="elementor-background-overlay"></div>-->
+                                <!--                                    <div class="elementor-shape elementor-shape-bottom" data-negative="false">-->
+                                <!--                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 19.6"-->
+                                <!--                                             preserveAspectRatio="none">-->
+                                <!--                                            <path class="elementor-shape-fill" style="opacity:0.33"-->
+                                <!--                                                  d="M0 0L0 18.8 141.8 4.1 283.5 18.8 283.5 0z"></path>-->
+                                <!--                                            <path class="elementor-shape-fill" style="opacity:0.33"-->
+                                <!--                                                  d="M0 0L0 12.6 141.8 4 283.5 12.6 283.5 0z"></path>-->
+                                <!--                                            <path class="elementor-shape-fill" style="opacity:0.33"-->
+                                <!--                                                  d="M0 0L0 6.4 141.8 4 283.5 6.4 283.5 0z"></path>-->
+                                <!--                                            <path class="elementor-shape-fill"-->
+                                <!--                                                  d="M0 0L0 1.2 141.8 4 283.5 1.2 283.5 0z"></path>-->
+                                <!--                                            <path class="elementor-shape-fill"-->
+                                <!--                                                  d="M0 0L0 1.2 141.8 4 283.5 1.2 283.5 0z"></path>-->
+                                <!--                                        </svg>-->
+                                <!--                                    </div>-->
+                                <!--                                </section>-->
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
+    </div>
+    <footer class="ast-custom-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
+    </footer>
+</div>
+
+
+<style data-wpacu-inline-css-file="1">
+    .elementor-1686 .elementor-element.elementor-element-2c7aa384:not(.elementor-motion-effects-element-type-background), .elementor-1686 .elementor-element.elementor-element-2c7aa384 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        background-color: var(--e-global-color-astglobalcolor1);
+    }
+
+    .elementor-1686 .elementor-element.elementor-element-2c7aa384 > .elementor-background-overlay {
+        opacity: 0.75;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .elementor-1686 .elementor-element.elementor-element-2c7aa384 {
+        transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .elementor-1686 .elementor-element.elementor-element-21389645 > .elementor-element-populated {
+        margin: 20px 0px 0px 0px;
+        --e-column-margin-right: 0px;
+        --e-column-margin-left: 0px;
+    }
+
+    @media (max-width: 1024px) {
+        .elementor-1686 .elementor-element.elementor-element-2c7aa384 {
+            padding: 0px 25px 35px 25px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .elementor-1686 .elementor-element.elementor-element-2c7aa384 {
+            padding: 0px 20px 25px 20px;
+        }
+    }
+
+    /* Start custom CSS for image, class: .elementor-element-bdf1cd0 */
+    .elementor-1686 .elementor-element.elementor-element-bdf1cd0 {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .elementor-1686 .elementor-element.elementor-element-bdf1cd0:after {
+        display: none;
+        /*font-family: "Font Awesome 5 Free";*/
+        /*font-weight: 900;*/
+        /*text-shadow: 1px 0 6px rgba(0,0,0,.3);*/
+        /*content: "\f144";*/
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*bottom: 50%;*/
+        /*  left: 50%;*/
+        /*transform: translate(-50%, -50%);*/
+        /*font-size: 6em;*/
+        /*line-height: 0px;*/
+    }
+
+    /* End custom CSS */
+    /* Start custom CSS for column, class: .elementor-element-21389645 */
+    .elementor-1686 .elementor-element.elementor-element-21389645 {
+        width: 100vw;
+    }
+
+    /* End custom CSS */
+    /* Start custom CSS for section, class: .elementor-element-2c7aa384 */
+    .elementor-1686 .elementor-element.elementor-element-2c7aa384 {
+        box-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black;
+        z-index: 3;
+    }
+
+    /* End custom CSS */
+</style>
+<style data-wpacu-inline-css-file="1">
+    .elementor-1687 .elementor-element.elementor-element-7efee42d:not(.elementor-motion-effects-element-type-background), .elementor-1687 .elementor-element.elementor-element-7efee42d > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        background-color: var(--e-global-color-astglobalcolor1);
+    }
+
+    .elementor-1687 .elementor-element.elementor-element-7efee42d > .elementor-background-overlay {
+        opacity: 0.75;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .elementor-1687 .elementor-element.elementor-element-7efee42d {
+        transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .elementor-1687 .elementor-element.elementor-element-240296fa > .elementor-element-populated {
+        margin: 20px 0px 0px 0px;
+        --e-column-margin-right: 0px;
+        --e-column-margin-left: 0px;
+    }
+
+    @media (max-width: 1024px) {
+        .elementor-1687 .elementor-element.elementor-element-7efee42d {
+            padding: 0px 25px 35px 25px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .elementor-1687 .elementor-element.elementor-element-7efee42d {
+            padding: 0px 20px 25px 20px;
+        }
+    }
+
+    /* Start custom CSS for image, class: .elementor-element-95f0f81 */
+    .elementor-1687 .elementor-element.elementor-element-95f0f81 {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .elementor-1687 .elementor-element.elementor-element-95f0f81:after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        text-shadow: 1px 0 6px rgba(0, 0, 0, .3);
+        content: "\f144";
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 6em;
+        line-height: 0px;
+    }
+
+    /* End custom CSS */
+    /* Start custom CSS for column, class: .elementor-element-240296fa */
+    .elementor-1687 .elementor-element.elementor-element-240296fa {
+        width: 100vw;
+    }
+
+    /* End custom CSS */
+    /* Start custom CSS for section, class: .elementor-element-7efee42d */
+    .elementor-1687 .elementor-element.elementor-element-7efee42d {
+        box-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black;
+        z-index: 3;
+    }
+
+    /* End custom CSS */
+</style>
+
+</body>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQHWSF3P');</script>
+<!-- End Google Tag Manager --><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQHWSF3P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<script>
+		function golink(){
+                                    fbq('track', 'AddToCart');
+			location.href = 'https://faetkm.mcgo2.com/click'
+		}
+	  </script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=758049026519960&ev=PageView&noscript=1">
+</noscript>
+<!-- End Meta Pixel Code -->
+<script type="text/javascript" src="awsd/jquery.min.js"></script>
+<script type="text/javascript" src="awsd/index.js"></script>
+<script type="text/javascript" id="unlimited-elements-scripts">
+
+    function onBtnLink(url) {
+        fbq('track', 'AddToCart');
+        const a = document.createElement('a')
+        a.href = url
+        a.click()
+    }
+
+    jQuery(document).ready(function (e) {
+        function uc_uc_icon_accordion_elementor_10f90f9_start() {
+            var objAccordion = jQuery("#uc_uc_icon_accordion_elementor_10f90f9");
+            console.log(objAccordion)
+            UCPostAccordion(objAccordion);
+            var objRemoteOptions = {
+                class_items: "uc_ac_box",
+                class_active: "uc-item-active",
+                selector_item_trigger: ".uc_trigger"
+            };
+            objAccordion.data("uc-remote-options", objRemoteOptions);
+            objAccordion.trigger("uc-object-ready");
+            jQuery("body").trigger("uc-remote-parent-init", [objAccordion])
+        }
+
+        setTimeout(function () {
+            if (jQuery("#uc_uc_icon_accordion_elementor_10f90f9").length) uc_uc_icon_accordion_elementor_10f90f9_start(); else jQuery(document).on('elementor/popup/show', () => {
+                if (jQuery("#uc_uc_icon_accordion_elementor_10f90f9").length) uc_uc_icon_accordion_elementor_10f90f9_start();
+            })
+        }, 100)
+    });
+    jQuery(document).ready(function () {
+        function uc_uc_icon_accordion_elementor_281b212_start() {
+            var objAccordion = jQuery("#uc_uc_icon_accordion_elementor_281b212");
+            UCPostAccordion(objAccordion);
+            var objRemoteOptions = {
+                class_items: "uc_ac_box",
+                class_active: "uc-item-active",
+                selector_item_trigger: ".uc_trigger"
+            };
+            objAccordion.data("uc-remote-options", objRemoteOptions);
+            objAccordion.trigger("uc-object-ready");
+            jQuery("body").trigger("uc-remote-parent-init", [objAccordion])
+        }
+
+        setTimeout(function () {
+            if (jQuery("#uc_uc_icon_accordion_elementor_281b212").length) uc_uc_icon_accordion_elementor_281b212_start(); else jQuery(document).on('elementor/popup/show', () => {
+                if (jQuery("#uc_uc_icon_accordion_elementor_281b212").length) uc_uc_icon_accordion_elementor_281b212_start();
+            })
+        }, 100)
+    });
+    jQuery(document).ready(function () {
+        function uc_carousel_flip_box_elementor_65c4463_start() {
+            var objCarousel = jQuery('#uc_carousel_flip_box_elementor_65c4463');
+
+            function initFlipbox() {
+                var objFlips = objCarousel.find(".ue-flip-box");
+                jQuery.each(objFlips, function (index, flip) {
+                    var objFlip = jQuery(flip);
+                    new UEFlipboxItem(objFlip)
+                })
+            }
+
+            function initCarousel() {
+                objCarousel.owlCarousel({
+                    loop: !0,
+                    rtl: !1,
+                    setActiveClassOnMobile: !0,
+                    changeItemOnClick: !1,
+                    center: !0,
+                    margin: 20,
+                    autoplay: !1,
+                    autoplayHoverPause: !1,
+                    paddingType: "none",
+                    autoplayTimeout: 5000,
+                    smartSpeed: 1000,
+                    dots: !0,
+                    nav: !0,
+                    navText: ["<i class='fas fa-arrow-left'><\/i>", "<i class='fas fa-arrow-right'><\/i>"],
+                    responsiveClass: !0,
+                    responsive: {0: {items: 1,}, 768: {items: 2,}, 980: {items: 3,}}
+                });
+                objCarousel.trigger("uc-object-ready");
+                jQuery("body").trigger("uc-remote-parent-init", [objCarousel])
+            }
+
+            initCarousel();
+            setTimeout(initFlipbox, 500)
+        }
+
+        if (jQuery("#uc_carousel_flip_box_elementor_65c4463").length) uc_carousel_flip_box_elementor_65c4463_start(); else jQuery(document).on('elementor/popup/show', () => {
+            if (jQuery("#uc_carousel_flip_box_elementor_65c4463").length) uc_carousel_flip_box_elementor_65c4463_start();
+        })
+    });
+    jQuery(document).ready(function () {
+        function uc_carousel_flip_box_elementor_75fe0f8_start() {
+            var objCarousel = jQuery('#uc_carousel_flip_box_elementor_75fe0f8');
+
+            function initFlipbox() {
+                var objFlips = objCarousel.find(".ue-flip-box");
+                jQuery.each(objFlips, function (index, flip) {
+                    var objFlip = jQuery(flip);
+                    new UEFlipboxItem(objFlip)
+                })
+            }
+
+            function initCarousel() {
+                objCarousel.owlCarousel({
+                    loop: !0,
+                    rtl: !1,
+                    setActiveClassOnMobile: !0,
+                    changeItemOnClick: !1,
+                    center: !0,
+                    margin: 20,
+                    autoplay: !1,
+                    autoplayHoverPause: !1,
+                    paddingType: "none",
+                    autoplayTimeout: 5000,
+                    smartSpeed: 1000,
+                    dots: !0,
+                    nav: !0,
+                    navText: ["<i class='fas fa-arrow-left'><\/i>", "<i class='fas fa-arrow-right'><\/i>"],
+                    responsiveClass: !0,
+                    responsive: {0: {items: 1,}, 768: {items: 2,}, 980: {items: 2,}}
+                });
+                objCarousel.trigger("uc-object-ready");
+                jQuery("body").trigger("uc-remote-parent-init", [objCarousel])
+            }
+
+            initCarousel();
+            setTimeout(initFlipbox, 500)
+        }
+
+        if (jQuery("#uc_carousel_flip_box_elementor_75fe0f8").length) uc_carousel_flip_box_elementor_75fe0f8_start(); else jQuery(document).on('elementor/popup/show', () => {
+            if (jQuery("#uc_carousel_flip_box_elementor_75fe0f8").length) uc_carousel_flip_box_elementor_75fe0f8_start();
+        })
+    })
+</script>
+</html>
