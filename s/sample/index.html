@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url('back.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box {
+      background: rgba(255, 255, 255, 0.1); /* 透明框 */
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px; /* 图标和文字间距 */
+      margin: 10px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 220px;   /* 按钮等长 */
+      box-sizing: border-box;
+    }
+    .telegram {
+      background-color: #0088cc;
+    }
+    .line {
+      background-color: #06c755;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+      <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQHWSF3P');</script>
+<!-- End Google Tag Manager -->
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQHWSF3P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div class="box">
+    <h2>지금 바로 추가하고 “3”을 보내주세요. 저희가 매력적이고 섹시한 여성 회원들을 추천해 드립니다.
+그녀들의 프라이버시는 반드시 보장해 주세요.</h2>
+    <a onclick="golinktele()" class="btn telegram">
+      <i class="fa-brands fa-telegram"></i> 텔레그램 추가
+    </a>
+    <a onclick="golinkline()" class="btn line"> 
+      <i class="fa-brands fa-line"></i> 라인 추가
+    </a>
+  </div>
+          <script>
+        function golinktele(){
+            fbq('track', 'CompleteRegistration');
+            setTimeout(function() {
+                window.location.href = 'https://rreoui.mcgo2.com/click/1';
+            }, 300);        }
+    </script>
+            <script>
+        function golinkline(){
+            fbq('track', 'CompleteRegistration');
+            setTimeout(function() {
+                window.location.href = 'https://rreoui.mcgo2.com/click/2';
+            }, 300);
+        }
+    </script>
+</body>
+</html>
