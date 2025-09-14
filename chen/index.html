@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockGuru India - Advanced Stock Analysis Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,107,53,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(247,147,30,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,107,53,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(255,107,53,0.3)); }
+            to { filter: drop-shadow(0 0 30px rgba(247,147,30,0.5)); }
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,107,53,0.4);
+        }
+        
+        /* Stock Lookup Section */
+        .stock-lookup {
+            background: white;
+            padding: 4rem 0;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .lookup-form {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .lookup-form h2 {
+            color: #1a1a2e;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .search-container {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            gap: 1rem;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-input:focus {
+            border-color: #ff6b35;
+        }
+        
+        .search-btn {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .search-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Features Section */
+        .features {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5rem 0;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Market Data Section */
+        .market-data {
+            background: white;
+            padding: 5rem 0;
+        }
+        
+        .market-data h2 {
+            text-align: center;
+            color: #1a1a2e;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .market-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #ff6b35;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .market-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .market-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+        
+        .market-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ff6b35;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+            text-align: center;
+            color: #666;
+        }
+        
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .modal {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transform: scale(0.7);
+            opacity: 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .modal.active {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .modal h3 {
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .analyzing-animation {
+            margin: 2rem 0;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            width: 0%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        .analysis-steps {
+            text-align: left;
+            margin: 1.5rem 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 0.8rem 0;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+        
+        .step.active {
+            opacity: 1;
+        }
+        
+        .step-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #28a745;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .step.pending .step-icon {
+            background: #e0e0e0;
+        }
+        
+        .whatsapp-section {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            display: none;
+        }
+        
+        .whatsapp-btn {
+            background: white;
+            color: #25D366;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-btn:hover {
+            color: #ff6b35;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">📈 StockGuru India</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#analysis">Analysis</a></li>
+                    <li><a href="#markets">Markets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Master Indian Stock Markets</h1>
+            <p>Professional stock analysis powered by advanced algorithms. Get real-time insights, technical analysis, and investment recommendations for NSE and BSE stocks.</p>
+            <a href="#analysis" class="cta-button">Start Free Analysis</a>
+        </div>
+    </section>
+
+    <!-- Stock Lookup Section -->
+    <section class="stock-lookup" id="analysis">
+        <div class="container">
+            <div class="lookup-form">
+                <h2>Analyze Any Indian Stock</h2>
+                <p>Enter NSE/BSE stock symbol or company name for instant analysis</p>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="e.g., RELIANCE, TATA, INFY, HDFC..." id="stockInput">
+                    <button class="search-btn" onclick="analyzeStock()">Analyze Stock</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Comprehensive Analysis Tools</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Technical Analysis</h3>
+                    <p>Advanced charting with 50+ technical indicators, support/resistance levels, and trend analysis for informed trading decisions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Fundamental Analysis</h3>
+                    <p>Deep dive into company financials, P/E ratios, debt levels, and growth metrics to assess intrinsic value.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Price Targets</h3>
+                    <p>AI-powered price predictions based on historical data, market sentiment, and sector performance analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Alerts</h3>
+                    <p>Get instant notifications for price movements, breakouts, and trading opportunities in your watchlist.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Portfolio Tracking</h3>
+                    <p>Monitor your investments with detailed performance analytics and risk assessment tools.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Ready</h3>
+                    <p>Access all features on-the-go with our responsive design optimized for mobile trading.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Data Section -->
+    <section class="market-data" id="markets">
+        <div class="container">
+            <h2>Live Market Overview</h2>
+            <div class="market-grid">
+                <div class="market-card">
+                    <div class="market-value">23,875.35</div>
+                    <div class="market-label">NIFTY 50</div>
+                </div>
+                <div class="market-card">
+                    <div class="market-value">78,452.18</div>
+                    <div class="market-label">SENSEX</div>
+                </div>
+                <div class="market-card">
+                    <div class="market-value">42,156.89</div>
+                    <div class="market-label">NIFTY BANK</div>
+                </div>
+                <div class="market-card">
+                    <div class="market-value">15,684.25</div>
+                    <div class="market-label">NIFTY IT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StockGuru India</h3>
+                    <p>Your trusted partner for Indian stock market analysis and investment decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Market Overview</a></li>
+                        <li><a href="#">Stock Screener</a></li>
+                        <li><a href="#">Portfolio Manager</a></li>
+                        <li><a href="#">Trading Ideas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Learning Center</a></li>
+                        <li><a href="#">Market News</a></li>
+                        <li><a href="#">Economic Calendar</a></li>
+                        <li><a href="#">Research Reports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StockGuru India. All rights reserved. | Market data provided for informational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Analysis Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="analysisModal">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h3>Analyzing Your Stock...</h3>
+            
+            <div class="analyzing-animation">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                
+                <div class="analysis-steps">
+                    <div class="step pending" id="step1">
+                        <div class="step-icon">✓</div>
+                        <span>Collecting market data...</span>
+                    </div>
+                    <div class="step pending" id="step2">
+                        <div class="step-icon">✓</div>
+                        <span>Running technical analysis...</span>
+                    </div>
+                    <div class="step pending" id="step3">
+                        <div class="step-icon">✓</div>
+                        <span>Evaluating fundamentals...</span>
+                    </div>
+                    <div class="step pending" id="step4">
+                        <div class="step-icon">✓</div>
+                        <span>Generating recommendations...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="whatsapp-section" id="whatsappSection">
+                <h4>📊 Analysis Complete!</h4>
+                <p>Get your detailed stock report with buy/sell recommendations, price targets, and risk analysis.</p>
+                <p><strong>Connect with our expert analysts on WhatsApp for personalized insights!</strong></p>
+                <a href="https://link.xinghewa.xyz/jpbarrnh" 
+                   target="_blank" class="whatsapp-btn">
+                    📱 Get Report on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function analyzeStock() {
+            showAnalysisModal();
+        }
+        
+        function showAnalysisModal() {
+            const modal = document.getElementById('modalOverlay');
+            const analysisModal = document.getElementById('analysisModal');
+            const progressFill = document.getElementById('progressFill');
+            const whatsappSection = document.getElementById('whatsappSection');
+            
+            // Show modal
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                analysisModal.classList.add('active');
+            }, 100);
+            
+            // Reset progress and steps
+            progressFill.style.width = '0%';
+            whatsappSection.style.display = 'none';
+            
+            // Reset all steps
+            for (let i = 1; i <= 4; i++) {
+                const step = document.getElementById('step' + i);
+                if (step) {
+                    step.classList.remove('active');
+                    step.classList.add('pending');
+                }
+            }
+            
+            // Simulate analysis process
+            let progress = 0;
+            let step = 1;
+            
+            const analysisInterval = setInterval(() => {
+                progress += 25;
+                progressFill.style.width = progress + '%';
+                
+                // Activate current step
+                const currentStep = document.getElementById('step' + step);
+                if (currentStep) {
+                    currentStep.classList.remove('pending');
+                    currentStep.classList.add('active');
+                }
+                
+                step++;
+                
+                if (progress >= 100) {
+                    clearInterval(analysisInterval);
+                    
+                    // Show WhatsApp section after analysis is complete
+                    setTimeout(() => {
+                        whatsappSection.style.display = 'block';
+                    }, 500);
+                }
+            }, 800);
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('modalOverlay');
+            const analysisModal = document.getElementById('analysisModal');
+            
+            analysisModal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+        
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Close modal when clicking outside
+            const modalOverlay = document.getElementById('modalOverlay');
+            if (modalOverlay) {
+                modalOverlay.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeModal();
+                    }
+                });
+            }
+            
+            // Allow Enter key to trigger search
+            const stockInput = document.getElementById('stockInput');
+            if (stockInput) {
+                stockInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        analyzeStock();
+                    }
+                });
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
